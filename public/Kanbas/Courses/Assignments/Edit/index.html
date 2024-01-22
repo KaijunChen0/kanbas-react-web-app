@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="select-speedgrader" id="select-speedgrader">
+        <option value="SPEED-GRADER">SpeedGrader</option>
+    </select><hr>
+
+    <h2>Assignment Name</h2>
+    <p><input type="text" placeholder="A1 - ENV + HTML"></p>
+    <p><textarea name="assignment-description" id="assignment-description" cols="20" rows="2">This is the assignment description.</textarea></p>
+
+    <p>
+        <label for="number-points">Points</label><br />
+        <input type="number" placeholder="100" id="number-points">
+    </p>
+   
+
+    <p>
+        <label for="select-assignment-group">Assignment Group</label><br />
+        <select name="select-assignment-group" id="select-assignment-group">
+            <option value="ASSIGNMENT-GROUP">ASSIGNMENT</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="select-display-grade">Display Grade as</label><br />
+        <select name="select-display-grade" id="select-display-grade">
+            <option value="PERCENTAGE">Percentage</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="select-submission-type">Submission Type</label><br />
+        <select name="select-submission-type" id="select-submission-type">
+            <option value="ONLINE">Online</option>
+        </select>
+    </p>
+
+    <p>
+        <label>Online Entry Options</label><br />
+        <input type="checkbox" name="oep-checkbox-text-entry" id="oep-checkbox-text-entry" value="TEXTENTRY">
+        <label for="oep-checkbox-text-entry">Text Entry</label><br />
+
+        <input type="checkbox" name="checkbox-website-url" id="checkbox-website-url" value="WEBSITEURL">
+        <label for="checkbox-website-url">Website URL</label><br />
+
+        <input type="checkbox" name="checkbox-media-recordings" id="checkbox-media-recordings" value="MEDIARECORDINGS">
+        <label for="checkbox-media-recordings">Media Recordings</label><br />
+
+        <input type="checkbox" name="checkbox-student-annotation" id="checkbox-student-annotation" value="STUDENTANNOTATION">
+        <label for="checkbox-student-annotation">Student Annotation</label><br />
+
+        <input type="checkbox" name="checkbox-file-uploads" id="checkbox-file-uploads" value="checkbox-file-uploads">
+        <label for="checkbox-file-uploads">File Uploads</label><br />
+    </p>
+
+    <p>
+        <label for="">Group Assignments</label><br />
+        <input type="checkbox" name="ga-checkbox-text-entry" id="ga-checkbox-text-entry" value="TEXTENTRY">
+        <label for="ga-checkbox-text-entry">Text Entry</label><br />
+    </p>
+
+    <p>
+        <label for="">Peer Reviews</label><br />
+        <input type="checkbox" name="pr-checkbox-text-entry" id="pr-checkbox-text-entry" value="TEXTENTRY">
+        <label for="pr-checkbox-text-entry">Text Entry</label><br />
+    </p>
+
+    <p>
+        Assign<br />
+        <label for="">Assign to</label><br />
+        <input type="text" placeholder="Everyone">
+    </p>
+
+    <p>
+        <label for="date-due">Due</label><br />
+        <input type="date" id="date-due" value="2021-01-01">
+    </p>
+
+    <p>
+        <label for="date-available">Available from</label><br />
+        <input type="date" id="date-available" value="2021-01-01">
+    </p>
+
+    <p>
+        <label for="date-until">Until</label><br />
+        <input type="date" id="date-until" value="2021-01-01">
+    </p>
+
+    <p>
+        <form action="../screen.html" method="get">
+            <button type="submit" >Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </p>
+</body>
+</html>
