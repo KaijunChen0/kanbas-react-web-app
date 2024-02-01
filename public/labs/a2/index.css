@@ -47,6 +47,10 @@ background-color: #ff7070;
 background-color: green;
 }
 
+.wd-bg-color-gray {
+background-color: gray;
+}
+
 .wd-border-fat {
 border-width: 20px 30px 20px 30px; }
 .wd-border-thin {
@@ -236,4 +240,6 @@ float: left;
   .wd-width-85px {
     width: 85px;
   }
+
+
   
