@@ -1,0 +1,10 @@
+.custom-dashboard-card-margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.custom-card-fixed-width {
+    min-width: 250px; 
+    max-width: 270px;
+    margin: 0 auto; 
+  }
