@@ -1,0 +1,8 @@
+.wd-comingup-item {
+  display: flex;
+}
+
+.wd-time {
+  color: gray;
+  font-size: 12px;
+}

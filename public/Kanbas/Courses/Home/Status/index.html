@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <script src="https://kit.fontawesome.com/cfbab4ade5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/Status/index.css">
 </head>
 <body>
-    <!--right side bar: course status and comming up-->
-    <h2>
-        Course Status
-    </h2>
-    <button>
-        Unpublish
-    </button>
-    <button>
-        Published
-    </button>
+    <div class="container">
+        <!--right side bar: course status and comming up-->
+        <div>
+            <h5>Course Status</h5>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-warning"><i class="fa-regular fa-circle-check"></i> Published</button>
+                <button type="button" class="btn btn-success"><i class="fa-solid fa-ban wd-ban-icon"></i> Unpublished</button>
+            </div>
+        </div><br />
+        
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-file-import"></i> Import Existing Content</a>
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-right-from-bracket"></i> Import From Commons</a>
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-bullseye"></i> Choose Home Page</a>
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-chart-simple"></i> View Course Stream</a>
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-bullhorn"></i> New Announcement</a>
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-chart-simple"></i> New Analytics</a>
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-bell"></i> View Course Notifications</a>
+        </div><br />
 
-    <ul>
-        <li><a href="">Import Existing Content</a></li>
-        <li><a href="">Import From Commons</a></li>
-        <li><a href="">Choose Home Page</a></li>
-        <li><a href="">View Course Stream</a></li>
-        <li><a href="">New Announcement</a></li>
-        <li><a href="">New Analytics</a></li>
-        <li><a href="">View Course Notifications</a></li>
-    </ul>
-
-    <h2>
-        Comming Up
-    </h2>
-
-    <p><a href="">View Calendar</a></p>
-    <ul>
-        <li><a href="">Lectrue CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-        <li><a href="">Lectrue CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-        <li><a href="">CS5610 06 SP23 Lectrue Sep 11 at 6pm</a></li>
-    </ul>
-
+        <div>
+            <h5>TO DO</h5><hr>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">Grade A1 - ENV + HTML</a></li>
+            </ul>
+        </div><br />
+        
+        <div>
+            <div>
+                <h5>Comming Up</h5>
+                <span class="float-end"><i class="fa-regular fa-calendar"></i><a href="#"> View Calendar</a></span><br />
+                <hr>
+            </div>
+            
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div><i class="fa-regular fa-calendar"></i><a href="#"> Lectrue CS4550.12631.202410 </a></div>
+                    <div class="wd-time">Sep 7 at 11:45am</div>
+                </li>
+                <li class="list-group-item">
+                    <div><i class="fa-regular fa-calendar"></i><a href="#"> Lectrue CS4550.12631.202410 </a></div>
+                    <div class="wd-time">Sep 11 at 11:45am</div>
+                </li>
+                <li class="list-group-item">
+                    <div><i class="fa-regular fa-calendar"></i><a href="#"> CS5610 06 SP23 Lectrue </a></div>
+                    <div class="wd-time">Sep 11 at 6pm</div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    
 </body>
 </html>
