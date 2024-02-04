@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- start button bar -->
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center m-4 ">
         <input class="form-control w-25" type="text" placeholder="Search for Assignments" aria-label="default input example">
     
         <div>
@@ -20,97 +20,14 @@
             <button type="button" class="btn btn-light square-button wd-button-border"><i class="fa fa-ellipsis-v"></i></button>
         </div>
     </div>
-    <hr>
+    <hr class="m-4">
     <!-- end button bar -->
-
-    <!-- <h3 style="display: inline;">ASSIGNMENT 40% of Total</h3>
-    <select name="select-assignment" id="select-assignment">
-        <option selected value="EDIT">Edit</option>
-        <option value="SPEED-GRADER">Speed Grader</option>
-        <option value="DUPLICATE">Duplicate</option>
-        <option value="DELETE">Delete</option>
-        <option value="MOVE-TO">Move To...</option>
-        <option value="SEND-TO">Send To...</option>
-        <option value="COPY-TO">Copy To...</option>
-        <option value="SHARE-TO-COMMONS">Share to Commons</option>
-    </select>
-    <ul>
-        <li><a href="../Assignments/Edit/screen.html">A1 - ENV + HTML</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="../Assignments/Edit/screen.html">A2 - CSS + BOOTSTRAP</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="../Assignments/Edit/screen.html">A3 - JS + REACT</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="../Assignments/Edit/screen.html">A4 - STATE + REDUX</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="../Assignments/Edit/screen.html">A5 - NODE + SESSION</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="../Assignments/Edit/screen.html">A6 - MONGO + MONGOOSE</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-    </ul>
-
-    <h3 style="display: inline;">QUIZZES 10% of Total</h3>
-    <select name="select-assignment" id="select-assignment">
-        <option selected value="EDIT">Edit</option>
-        <option value="SPEED-GRADER">Speed Grader</option>
-        <option value="DUPLICATE">Duplicate</option>
-        <option value="DELETE">Delete</option>
-        <option value="MOVE-TO">Move To...</option>
-        <option value="SEND-TO">Send To...</option>
-        <option value="COPY-TO">Copy To...</option>
-        <option value="SHARE-TO-COMMONS">Share to Commons</option>
-    </select>
-    <ul>
-        <li><a href="">Q1 - HTML</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="">Q2 - CSS</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="">Q3 - JS,ES6</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="">Q4 - NODE</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="">Q5 - MONGO</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-    </ul>
-
-    <h3 style="display: inline;">EXAMS 20% of Total</h3>
-    <select name="select-assignment" id="select-assignment">
-        <option selected value="EDIT">Edit</option>
-        <option value="SPEED-GRADER">Speed Grader</option>
-        <option value="DUPLICATE">Duplicate</option>
-        <option value="DELETE">Delete</option>
-        <option value="MOVE-TO">Move To...</option>
-        <option value="SEND-TO">Send To...</option>
-        <option value="COPY-TO">Copy To...</option>
-        <option value="SHARE-TO-COMMONS">Share to Commons</option>
-    </select>
-    <ul>
-        <li><a href="">Midterm</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-        <li><a href="">Final</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-    </ul>
-
-    <h3 style="display: inline;">PROJECT 30% of Total</h3>
-    <select name="select-assignment" id="select-assignment">
-        <option selected value="EDIT">Edit</option>
-        <option value="SPEED-GRADER">Speed Grader</option>
-        <option value="DUPLICATE">Duplicate</option>
-        <option value="DELETE">Delete</option>
-        <option value="MOVE-TO">Move To...</option>
-        <option value="SEND-TO">Send To...</option>
-        <option value="COPY-TO">Copy To...</option>
-        <option value="SHARE-TO-COMMONS">Share to Commons</option>
-    </select>
-    <ul>
-        <li><a href="">Project</a></li>
-        <a href="">Multiple Modules</a> | Not available yet<br />
-    </ul>-->
     
     <ul class="list-group wd-modules wd-assignments-links">
-        <li class="list-group-item"><!-- assignment block -->
-            <div>
-                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> Assignments</span>
+        <li class="list-group-item m-4"><!-- assignment block -->
+            <div class="p-3">
+                <span class="m-1"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                <span class="m-1"><i class="fa-solid fa-caret-down"></i> ASSIGNMENTS</span>
                 <span class="float-end">
                     <span><button type="button" class="rounded-rect-button">40% of Total</button></span>
                     <i class="fa fa-plus ms-2"></i>
@@ -119,11 +36,12 @@
             </div>
 
             <ul class="list-group">
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-regular fa-pen-to-square"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="../Assignments/Edit/screen.html">A1 - ENV + HTML</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Apr 7 at 12:20pm | Due Jan 23 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -131,11 +49,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-regular fa-pen-to-square"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="../Assignments/Edit/screen.html">A2 - CSS + BOOTSTRAP</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Jan 23 at 12:20pm | Due Feb 4 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -143,11 +62,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-regular fa-pen-to-square"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="../Assignments/Edit/screen.html">A3 - JS + REACT</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Feb 4 at 9:00pm | Due Feb 19 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -155,11 +75,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-regular fa-pen-to-square"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="../Assignments/Edit/screen.html">A4 - STATE + REDUX</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Feb 18 at 9:00pm | Due Mar 11 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -167,11 +88,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-regular fa-pen-to-square"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="../Assignments/Edit/screen.html">A5 - NODE + SESSION</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Mar 11 at 12:20pm | Due Mar 25 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -179,11 +101,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-regular fa-pen-to-square"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="../Assignments/Edit/screen.html">A6 - MONGO + MONGOOSE</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Mar 25 at 12:20pm | Due Apr 7 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -193,9 +116,10 @@
             </ul>
         </li>
 
-        <li class="list-group-item"><!-- quizzes block -->
-            <div>
-                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> QUIZZES</span>
+        <li class="list-group-item m-4"><!-- quizzes block -->
+            <div class="p-3">
+                <span class="m-1"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                <span class="m-1"><i class="fa-solid fa-caret-down"></i> QUIZZES</span>
                 <span class="float-end">
                     <span><button type="button" class="rounded-rect-button">10% of Total</button></span>
                     <i class="fa fa-plus ms-2"></i>
@@ -204,11 +128,12 @@
             </div>
 
             <ul class="list-group">
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-solid fa-rocket"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Q1 - HTML</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Jan 15 at 12:20pm | Due Jan 21 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -216,11 +141,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-solid fa-rocket"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Q2 - CSS</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Jan 22 at 12:20pm | Due Jan 29 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -228,11 +154,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-solid fa-rocket"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Q3 - JS, ES6</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Feb 5 at 12:20pm | Due Feb 14 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -240,11 +167,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-solid fa-rocket"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Q4 - NODE</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Feb 15 at 12:20pm | Due Feb 21 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -252,11 +180,12 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-solid fa-rocket"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Q5 - MONGO</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Not available until Feb 22 at 12:20pm | Due Feb 29 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
@@ -266,9 +195,10 @@
             </ul>
         </li>
 
-        <li class="list-group-item"><!-- exams block -->
-            <div>
-                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> EXAMS</span>
+        <li class="list-group-item m-4"><!-- exams block -->
+            <div class="p-3">
+                <span class="m-1"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                <span class="m-1"><i class="fa-solid fa-caret-down"></i> EXAMS</span>
                 <span class="float-end">
                     <span><button type="button" class="rounded-rect-button">20% of Total</button></span>
                     <i class="fa fa-plus ms-2"></i>
@@ -277,8 +207,9 @@
             </div>
 
             <ul class="list-group">
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-solid fa-rocket"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Midterm</a>
                         <p class="wd-time">Not available until Feb 25 at 9:00pm | Due Mar 1 at 8:59pm | -/113 pts</p>
@@ -289,8 +220,9 @@
                     </span>
                 </li>
                 
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-solid fa-rocket"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Final</a>
                         <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 19 at 8:59pm | -/100 pts</p>
@@ -303,9 +235,10 @@
             </ul>
         </li>
 
-        <li class="list-group-item"><!-- projects block -->
-            <div>
-                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> PROJECT</span> 
+        <li class="list-group-item m-4"><!-- projects block -->
+            <div class="p-3">
+                <span class="m-1"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> </span>
+                <span class="m-1"><i class="fa-solid fa-caret-down"></i> PROJECT</span> 
                 <span class="float-end">
                     <span><button type="button" class="rounded-rect-button">30% of Total</button></span>
                     <i class="fa fa-plus ms-2"></i>
@@ -314,11 +247,12 @@
             </div>
 
             <ul class="list-group">
-                <li class="list-group-item d-flex align-items-center justify-content-between">
-                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                    <span class="m-2"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i></span>
+                    <span class="m-2"><i class="fa-regular fa-pen-to-square"></i></span>
                     <div class="flex-grow-1 ms-3">
                         <a href="#">Project</a>
-                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                        <p class="wd-time">Available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
                     </div>
                     <span class="float-end">
                         <i class="fa fa-check-circle text-success"></i>
