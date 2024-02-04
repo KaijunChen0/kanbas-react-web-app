@@ -1,0 +1,15 @@
+.rounded-rect-button {
+    border-radius: 40px; 
+    background-color: lightgray; 
+    border: 1px solid black; 
+    color: black; 
+    padding: 2px 5px;
+    font-size: 10px; 
+    cursor: pointer;
+  }
+
+  /* set all links in Assignment Home page */
+.wd-assignments-links li ul li a { 
+  color: black;
+}
+  

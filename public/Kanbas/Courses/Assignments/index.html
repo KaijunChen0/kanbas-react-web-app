@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link rel="stylesheet" href="/Kanbas/style.css">
+    <script src="https://kit.fontawesome.com/cfbab4ade5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css">
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/Status/index.css">
 </head>
 <body>
-    <input type="text" placeholder="Search for Assignments">
-    <button>Group</button>
-    <button>Assignment</button>
-    <select name="select-assignment-dates" id="select-assignment-dates">
-        <option value="">Edit Assignment Dates</option>
-    </select><br /><hr><br />
+    <!-- start button bar -->
+    <div class="d-flex justify-content-between align-items-center">
+        <input class="form-control w-25" type="text" placeholder="Search for Assignments" aria-label="default input example">
+    
+        <div>
+            <button type="button" class="btn btn-light wd-button-border me-2"><i class="fa-solid fa-plus"></i> Group</button>
+            <button type="button" class="btn btn-light wd-button-border me-2 wd-module-button"><i class="fa-solid fa-plus"></i> Assignment</button>
+            <button type="button" class="btn btn-light square-button wd-button-border"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+    </div>
+    <hr>
+    <!-- end button bar -->
 
-    <h3 style="display: inline;">ASSIGNMENT 40% of Total</h3>
+    <!-- <h3 style="display: inline;">ASSIGNMENT 40% of Total</h3>
     <select name="select-assignment" id="select-assignment">
         <option selected value="EDIT">Edit</option>
         <option value="SPEED-GRADER">Speed Grader</option>
@@ -95,6 +105,229 @@
     <ul>
         <li><a href="">Project</a></li>
         <a href="">Multiple Modules</a> | Not available yet<br />
+    </ul>-->
+    
+    <ul class="list-group wd-modules wd-assignments-links">
+        <li class="list-group-item"><!-- assignment block -->
+            <div>
+                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> Assignments</span>
+                <span class="float-end">
+                    <span><button type="button" class="rounded-rect-button">40% of Total</button></span>
+                    <i class="fa fa-plus ms-2"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="../Assignments/Edit/screen.html">A1 - ENV + HTML</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="../Assignments/Edit/screen.html">A2 - CSS + BOOTSTRAP</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="../Assignments/Edit/screen.html">A3 - JS + REACT</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="../Assignments/Edit/screen.html">A4 - STATE + REDUX</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="../Assignments/Edit/screen.html">A5 - NODE + SESSION</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="../Assignments/Edit/screen.html">A6 - MONGO + MONGOOSE</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+            </ul>
+        </li>
+
+        <li class="list-group-item"><!-- quizzes block -->
+            <div>
+                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> QUIZZES</span>
+                <span class="float-end">
+                    <span><button type="button" class="rounded-rect-button">10% of Total</button></span>
+                    <i class="fa fa-plus ms-2"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Q1 - HTML</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Q2 - CSS</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Q3 - JS, ES6</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Q4 - NODE</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Q5 - MONGO</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+            </ul>
+        </li>
+
+        <li class="list-group-item"><!-- exams block -->
+            <div>
+                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> EXAMS</span>
+                <span class="float-end">
+                    <span><button type="button" class="rounded-rect-button">20% of Total</button></span>
+                    <i class="fa fa-plus ms-2"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Midterm</a>
+                        <p class="wd-time">Not available until Feb 25 at 9:00pm | Due Mar 1 at 8:59pm | -/113 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Final</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 19 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+            </ul>
+        </li>
+
+        <li class="list-group-item"><!-- projects block -->
+            <div>
+                <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-solid fa-caret-down"></i> PROJECT</span> 
+                <span class="float-end">
+                    <span><button type="button" class="rounded-rect-button">30% of Total</button></span>
+                    <i class="fa fa-plus ms-2"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center justify-content-between">
+                    <span><i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa-regular fa-pen-to-square"></i></span>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="#">Project</a>
+                        <p class="wd-time">Not available until Apr 15 at 12:20pm | Due Apr 21 at 8:59pm | -/100 pts</p>
+                    </div>
+                    <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                </li>
+            </ul>
+        </li>
     </ul>
+    
 </body>
 </html>
