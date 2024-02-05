@@ -9,300 +9,304 @@
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/cfbab4ade5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css">
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/Status/index.css">
 </head>
 <body>
-    <table>
-        <thead></thead>
-        <tbody>
-            <tr> 
-                <td valign="top"><!--kanbas navigation bar-->
-                    <ul class="wd-kanbas-navigation">
-                        <li><a href="http://northeastern.edu">
-                            <img class="wd-kanbas-navigation-Nlogo" src="/images/NEU.png" alt="NEU logo"></a>
-                        </li>
-                        <li class="wd-kanbas-navigation-account"><a href="../../Account/Profile/screen.html">
-                            <i class="bi bi-person-circle"></i> Account</a>
-                        </li>
-                        <li><a href="../../Dashboard/screen.html">
-                            <i class="fa fa-tachometer"></i> Dashboard</a>
-                        </li>
-                        <li class="wd-active"><a href="../Home/screen.html">
-                            <i class="fa-solid fa-book"></i> Courses</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
-                        <li><a href="#">
-                            <i class="fa-solid fa-envelope-open-text"></i> Inbox</a>
-                        </li>
-                        <li><a href="#">
-                            <i class="fa-regular fa-clock"></i>History</a>
-                        </li>
-                        <li><a href="#">
-                            <i class="bi bi-laptop"></i>Studio</a>
-                        </li>
-                        <li><a href="#">
-                            <i class="bi bi-arrow-right-circle-fill"></i>Commons</a></li>
-                        <li><a href="#">
-                            <i class="bi bi-question-circle"></i>Help</a>
-                        </li>
-                    </ul>
-                </td>
+<!-- styling start -->
+<div class="d-flex">
+    <div class="d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+            <li><a href="http://northeastern.edu">
+                <img class="wd-kanbas-navigation-Nlogo" src="/images/NEU.png" alt="NEU logo"></a>
+            </li>
+            <li class="wd-kanbas-navigation-account"><a href="../../Account/Profile/screen.html">
+                <i class="bi bi-person-circle"></i> Account</a>
+            </li>
+            <li><a href="../../Dashboard/screen.html">
+                <i class="fa fa-tachometer"></i> Dashboard</a>
+            </li>
+            <li class="wd-active"><a href="../Home/screen.html">
+                <i class="fa-solid fa-book"></i> Courses</a>
+            </li>
+            <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-envelope-open-text"></i> Inbox</a>
+            </li>
+            <li><a href="#">
+                <i class="fa-regular fa-clock"></i>History</a>
+            </li>
+            <li><a href="#">
+                <i class="bi bi-laptop"></i>Studio</a>
+            </li>
+            <li><a href="#">
+                <i class="bi bi-arrow-right-circle-fill"></i>Commons</a></li>
+            <li><a href="#">
+                <i class="bi bi-question-circle"></i>Help</a>
+            </li>
+        </ul>
+    </div>
 
-                <td valign="top"> <!--course navigation bar-->
-                    <ul class="wd-navigation">
-                        <li><a href="../Home/screen.html">Home</a></li>
-                        <li><a href="../Modules/screen.html">Modules</a></li>
-                        <li><a href="">Piazza</a></li>
-                        <li><a href="">Zoom Meetings</a></li>
-                        <li><a href="../Assignments/screen.html">Assignments</a></li>
-                        <li><a href="">Quizzes</a></li>
-                        <li class="wd-active"><a href="../Grades/screen.html">Grades</a></li>
-                        <li><a href="">People</a></li>
-                        <li><a href="">Panopto Video</a></li>
-                        <li><a href="">Discussions</a></li>
-                        <li><a href="">Announcements</a></li>
-                        <li><a href="">Pages</a></li>
-                        <li><a href="">Files</a></li>
-                        <li><a href="">Rubrics</a></li>
-                        <li><a href="">Outcomes</a></li>
-                        <li><a href="">Collaborations</a></li>
-                        <li><a href="">Syllabus</a></li>
-                        <li><a href="../Settings/CourseDetails/screen.html">Settings</a></li>
-                    </ul>
-                </td>
+    <div class="d-none d-md-block">
+        <ul class="wd-navigation">
+            <li><a href="../Home/screen.html">Home</a></li>
+            <li><a href="../Modules/screen.html">Modules</a></li>
+            <li><a href="">Piazza</a></li>
+            <li><a href="">Zoom Meetings</a></li>
+            <li><a href="../Assignments/screen.html">Assignments</a></li>
+            <li><a href="">Quizzes</a></li>
+            <li class="wd-active"><a href="../Grades/screen.html">Grades</a></li>
+            <li><a href="">People</a></li>
+            <li><a href="">Panopto Video</a></li>
+            <li><a href="">Discussions</a></li>
+            <li><a href="">Announcements</a></li>
+            <li><a href="">Pages</a></li>
+            <li><a href="">Files</a></li>
+            <li><a href="">Rubrics</a></li>
+            <li><a href="">Outcomes</a></li>
+            <li><a href="">Collaborations</a></li>
+            <li><a href="">Syllabus</a></li>
+            <li><a href="../Settings/CourseDetails/screen.html">Settings</a></li>
+        </ul>
+    </div>
 
-                <td valign="top"> <!--course grade bar-->
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <select name="" id="">
-                                        <option value="">
-                                            Gradebook
-                                        </option>
-                                    </select>
-                               
-                                    <button>
-                                        Import
-                                    </button>
-                                
-                                    <select name="" id="">
-                                        <option value="">
-                                            Export
-                                        </option>
-                                    </select>
-                              
-                                    <button>
-                                        Configure
-                                    </button>
-                                </td>
-                            </tr>
+    <div class="flex-fill">
+        <div class="container mb-3">
+            <div class="d-flex justify-content-end m-4">
+                <button type="button" class="btn btn-light wd-button-border me-2"><i class="fa-solid fa-file-import"></i> Import</button>
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle wd-button-border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-file-export"></i> Export
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-light square-button wd-button-border"><i class="fa-solid fa-gear"></i></button>
+            </div>
+    
+            <div class="row m-3 p-1 g-3">
+                <div class="col-md-6">
+                    <label for="date-available"><b>Student Names</b></label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected><i class="fa-solid fa-magnifying-glass"></i> Search Students</option>
+                        <option value="1">Amy</option>
+                        <option value="2">Bob</option>
+                        <option value="3">Clark</option>
+                    </select>
+                </div>
                 
-                            <tr>
-                                <td>
-                                    <h2><label for="text-student-names">Student Names</label></h2>
-                                    <input type="text" id="text-student-names" placeholder="Search Students"><br />
-                                </td>
-                            </tr>
-                
-                            <tr>
-                                <td>
-                                    <h2><label for="text-assignment-names">Assignment Names</label></h2>
-                                    <input type="text" id="text-assignment-names" placeholder="Search Assignment"><br /><br />
-                                </td>
-                            </tr>
-                
-                            <tr>
-                                <td>
-                                    <button>
-                                        Apply Filters
-                                    </button><br /><br />
-                                </td>
-                            </tr>
-                
-                            <tr>
-                                <td>
-                                    <table align="left" border="1" style="width: auto;" align="center">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 20%">Student Name</th>
-                                                <th>A1 SETUP Out of 100</th>
-                                                <th>A2 HTML Out of 100</th>
-                                                <th>A3 CSS Out of 100</th>
-                                                <th>A4 BOOTSTRAP Out of 100</th>
-                                                <th>A5 JAVASCRIPT Out of 100</th>
-                                                <th>A6 REACT Out of 100</th>
-                                                <th>A7 REDUX Out of 100</th>
-                                                <th>A8 NODE Out of 100</th>
-                                                <th>A9 MONGO Out of 100</th>
-                                            </tr>
-                                        </thead>
-                                
-                                        <tbody>
-                                            <tr>
-                                                <td align="left">Alice Wonderland</td>
-                                                <td align="center"><input value="98" style="width: 30%;"></td>
-                                                <td align="center"><input value="89" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>
-                                                <td align="center"><input value="90" style="width: 30%;"></td>
-                                                <td align="center"><input value="89" style="width: 30%;"></td>
-                                                <td align="center"><input value="94" style="width: 30%;"></td>
-                                                <td align="center"><input value="88" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>
-                                                <td align="center"><input value="100" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Princes Leia</td>
-                                                <td align="center"><input value="98" style="width: 30%;"></td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>
-                                                <td align="center"><input value="86" style="width: 30%;"></td>
-                                                <td align="center"><input value="100" style="width: 30%;"></td>
-                                                <td align="center"><input value="94" style="width: 30%;"></td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="84" style="width: 30%;"></td>
-                                                <td align="center"><input value="92" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Luke Skywalker</td>
-                                                <td align="center"><input value="99" style="width: 30%;"></td>
-                                                <td align="center"><input value="88" style="width: 30%;"></td>
-                                                <td align="center"><input value="97" style="width: 30%;"></td>
-                                                <td align="center"><input value="82" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                                <td align="center"><input value="93" style="width: 30%;"></td>
-                                                <td align="center"><input value="95" style="width: 30%;"></td>
-                                                <td align="center"><input value="100" style="width: 30%;"></td>
-                                                <td align="center"><input value="93" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Han Solo</td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="99" style="width: 30%;"></td>
-                                                <td align="center"><input value="94" style="width: 30%;"></td>
-                                                <td align="center"><input value="98" style="width: 30%;"></td>
-                                                <td align="center"><input value="86" style="width: 30%;"></td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="86" style="width: 30%;"></td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                                <td align="center"><input value="84" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Lando Calresian</td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="92" style="width: 30%;"></td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                                <td align="center"><input value="92" style="width: 30%;"></td>
-                                                <td align="center"><input value="92" style="width: 30%;"></td>
-                                                <td align="center"><input value="94" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>
-                                                <td align="center"><input value="95" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Boba Fet</td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="89" style="width: 30%;"></td>
-                                                <td align="center"><input value="94" style="width: 30%;"></td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="84" style="width: 30%;"></td>
-                                                <td align="center"><input value="91" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Darth Vader</td>
-                                                <td align="center"><input value="81" style="width: 30%;"></td>
-                                                <td align="center"><input value="81" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                                <td align="center"><input value="89" style="width: 30%;"></td>
-                                                <td align="center"><input value="88" style="width: 30%;"></td>
-                                                <td align="center"><input value="82" style="width: 30%;"></td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                                <td align="center"><input value="82" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Obi-Wan Kenobi</td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="99" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>
-                                                <td align="center"><input value="82" style="width: 30%;"></td>
-                                                <td align="center"><input value="88" style="width: 30%;"></td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="88" style="width: 30%;"></td>
-                                                <td align="center"><input value="92" style="width: 30%;"></td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">R2-D2</td>
-                                                <td align="center"><input value="81" style="width: 30%;"></td>
-                                                <td align="center"><input value="92" style="width: 30%;"></td>
-                                                <td align="center"><input value="82" style="width: 30%;"></td>
-                                                <td align="center"><input value="86" style="width: 30%;"></td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="84" style="width: 30%;"></td>
-                                                <td align="center"><input value="98" style="width: 30%;"></td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">C-3PO</td>
-                                                <td align="center"><input value="94" style="width: 30%;"></td>
-                                                <td align="center"><input value="98" style="width: 30%;"></td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="83" style="width: 30%;"></td>
-                                                <td align="center"><input value="100" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>                
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Yoda</td>
-                                                <td align="center"><input value="80" style="width: 30%;"></td>
-                                                <td align="center"><input value="89" style="width: 30%;"></td>
-                                                <td align="center"><input value="99" style="width: 30%;"></td>
-                                                <td align="center"><input value="89" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="96" style="width: 30%;"></td>
-                                                <td align="center"><input value="92" style="width: 30%;"></td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                            <tr>
-                                                <td align="left">Admiral Ackbar</td>
-                                                <td align="center"><input value="82" style="width: 30%;"></td>
-                                                <td align="center"><input value="88" style="width: 30%;"></td>
-                                                <td align="center"><input value="95" style="width: 30%;"></td>
-                                                <td align="center"><input value="100" style="width: 30%;"></td>
-                                                <td align="center"><input value="93" style="width: 30%;"></td>
-                                                <td align="center"><input value="98" style="width: 30%;"></td>
-                                                <td align="center"><input value="85" style="width: 30%;"></td>
-                                                <td align="center"><input value="87" style="width: 30%;"></td>
-                                                <td align="center"><input value="99" style="width: 30%;"></td>
-                                            </tr>
-                                
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                <div class="col-md-6">
+                    <label for="date-available"><b>Assignment Names</b></label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected><i class="fa-solid fa-magnifying-glass"></i> Search Assignments</option>
+                        <option value="1">A1</option>
+                        <option value="2">A2</option>
+                        <option value="3">A3</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="row m-3 p-1">
+                <div  class="col-md-6">
+                    <button class="btn btn-light wd-button-border me-2"><i class="fa-solid fa-filter"></i> Apply Filters</button>
+                </div>
+            </div>
+    
+            <div class="row m-3 p-1">
+                <!--grades table-->
+                <div class="container md-3">
+                    <div class="table-responsive">
+                        <table class="table table-striped wd-button-border table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>A1 SETUP Out of 100</th>
+                                    <th>A2 HTML Out of 100</th>
+                                    <th>A3 CSS Out of 100</th>
+                                    <th>A4 BOOTSTRAP Out of 100</th>
+                                    <th>A5 JAVASCRIPT Out of 100</th>
+                                    <th>A6 REACT Out of 100</th>
+                                    <th>A7 REDUX Out of 100</th>
+                                    <th>A8 NODE Out of 100</th>
+                                    <th>A9 MONGO Out of 100</th>
+                                </tr>
+                            </thead>
+                    
+                            <tbody>
+                                <tr>
+                                    <td align="left"><b>Alice Wonderland</b></td>
+                                    <td align="center"><input value="98" style="width: 30%;"></td>
+                                    <td align="center"><input value="89" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>
+                                    <td align="center"><input value="90" style="width: 30%;"></td>
+                                    <td align="center"><input value="89" style="width: 30%;"></td>
+                                    <td align="center"><input value="94" style="width: 30%;"></td>
+                                    <td align="center"><input value="88" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>
+                                    <td align="center"><input value="100" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Princes Leia</b></td>
+                                    <td align="center"><input value="98" style="width: 30%;"></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>
+                                    <td align="center"><input value="86" style="width: 30%;"></td>
+                                    <td align="center"><input value="100" style="width: 30%;"></td>
+                                    <td align="center"><input value="94" style="width: 30%;"></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="84" style="width: 30%;"></td>
+                                    <td align="center"><input value="92" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Luke Skywalker</b></td>
+                                    <td align="center"><input value="99" style="width: 30%;"></td>
+                                    <td align="center"><input value="88" style="width: 30%;"></td>
+                                    <td align="center"><input value="97" style="width: 30%;"></td>
+                                    <td align="center"><input value="82" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                    <td align="center"><input value="93" style="width: 30%;"></td>
+                                    <td align="center"><input value="95" style="width: 30%;"></td>
+                                    <td align="center"><input value="100" style="width: 30%;"></td>
+                                    <td align="center"><input value="93" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Han Solo</b></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="99" style="width: 30%;"></td>
+                                    <td align="center"><input value="94" style="width: 30%;"></td>
+                                    <td align="center"><input value="98" style="width: 30%;"></td>
+                                    <td align="center"><input value="86" style="width: 30%;"></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="86" style="width: 30%;"></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                    <td align="center"><input value="84" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Lando Calresian</b></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="92" style="width: 30%;"></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                    <td align="center"><input value="92" style="width: 30%;"></td>
+                                    <td align="center"><input value="92" style="width: 30%;"></td>
+                                    <td align="center"><input value="94" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>
+                                    <td align="center"><input value="95" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Boba Fet</b></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="89" style="width: 30%;"></td>
+                                    <td align="center"><input value="94" style="width: 30%;"></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="84" style="width: 30%;"></td>
+                                    <td align="center"><input value="91" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Darth Vader</b></td>
+                                    <td align="center"><input value="81" style="width: 30%;"></td>
+                                    <td align="center"><input value="81" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                    <td align="center"><input value="89" style="width: 30%;"></td>
+                                    <td align="center"><input value="88" style="width: 30%;"></td>
+                                    <td align="center"><input value="82" style="width: 30%;"></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                    <td align="center"><input value="82" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Obi-Wan Kenobi</b></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="99" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>
+                                    <td align="center"><input value="82" style="width: 30%;"></td>
+                                    <td align="center"><input value="88" style="width: 30%;"></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="88" style="width: 30%;"></td>
+                                    <td align="center"><input value="92" style="width: 30%;"></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>R2-D2</b></td>
+                                    <td align="center"><input value="81" style="width: 30%;"></td>
+                                    <td align="center"><input value="92" style="width: 30%;"></td>
+                                    <td align="center"><input value="82" style="width: 30%;"></td>
+                                    <td align="center"><input value="86" style="width: 30%;"></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="84" style="width: 30%;"></td>
+                                    <td align="center"><input value="98" style="width: 30%;"></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>C-3PO</b></td>
+                                    <td align="center"><input value="94" style="width: 30%;"></td>
+                                    <td align="center"><input value="98" style="width: 30%;"></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="83" style="width: 30%;"></td>
+                                    <td align="center"><input value="100" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>                
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Yoda</b></td>
+                                    <td align="center"><input value="80" style="width: 30%;"></td>
+                                    <td align="center"><input value="89" style="width: 30%;"></td>
+                                    <td align="center"><input value="99" style="width: 30%;"></td>
+                                    <td align="center"><input value="89" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="96" style="width: 30%;"></td>
+                                    <td align="center"><input value="92" style="width: 30%;"></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td align="left"><b>Admiral Ackbar</b></td>
+                                    <td align="center"><input value="82" style="width: 30%;"></td>
+                                    <td align="center"><input value="88" style="width: 30%;"></td>
+                                    <td align="center"><input value="95" style="width: 30%;"></td>
+                                    <td align="center"><input value="100" style="width: 30%;"></td>
+                                    <td align="center"><input value="93" style="width: 30%;"></td>
+                                    <td align="center"><input value="98" style="width: 30%;"></td>
+                                    <td align="center"><input value="85" style="width: 30%;"></td>
+                                    <td align="center"><input value="87" style="width: 30%;"></td>
+                                    <td align="center"><input value="99" style="width: 30%;"></td>
+                                </tr>
+                    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+  </div>
+
+<!-- styling end -->
+
+
 </body>
 </html>
