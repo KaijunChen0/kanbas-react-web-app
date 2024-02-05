@@ -8,84 +8,82 @@
     <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/cfbab4ade5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
 </head>
 <body>
-    <table>
-        <thead></thead>
-        <tbody>
-            <tr>
-                <td valign="top"> <!--kanbas navigation-->
-                    <ul class="wd-kanbas-navigation">
-                        <li><a href="http://northeastern.edu">
-                            <img class="wd-kanbas-navigation-Nlogo" src="/images/NEU.png" alt="NEU logo"></a>
-                        </li>
-                        <li class="wd-kanbas-navigation-account wd-active"><a href="../Profile/screen.html">
-                            <i class="bi bi-person-circle"></i> Account</a>
-                        </li>
-                        <li><a href="../../Dashboard/screen.html">
-                            <i class="fa fa-tachometer"></i> Dashboard</a>
-                        </li>
-                        <li><a href="../../Courses/Home/screen.html">
-                            <i class="fa-solid fa-book"></i> Courses</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
-                        <li><a href="#">
-                            <i class="fa-solid fa-envelope-open-text"></i> Inbox</a>
-                        </li>
-                        <li><a href="#">
-                            <i class="fa-regular fa-clock"></i>History</a>
-                        </li>
-                        <li><a href="#">
-                            <i class="bi bi-laptop"></i>Studio</a>
-                        </li>
-                        <li><a href="#">
-                            <i class="bi bi-arrow-right-circle-fill"></i>Commons</a></li>
-                        <li><a href="#">
-                            <i class="bi bi-question-circle"></i>Help</a>
-                        </li>
-                    </ul>
-                </td>
+    <!-- styling here -->
+    <div class="d-flex">
+        <div class="d-none d-md-block">
+            <ul class="wd-kanbas-navigation">
+                <li><a href="http://northeastern.edu">
+                    <img class="wd-kanbas-navigation-Nlogo" src="/images/NEU.png" alt="NEU logo"></a>
+                </li>
+                <li class="wd-kanbas-navigation-account wd-active"><a href="../Profile/screen.html">
+                    <i class="bi bi-person-circle"></i> Account</a>
+                </li>
+                <li><a href="../../Dashboard/screen.html">
+                    <i class="fa fa-tachometer"></i> Dashboard</a>
+                </li>
+                <li><a href="../../Courses/Home/screen.html">
+                    <i class="fa-solid fa-book"></i> Courses</a>
+                </li>
+                <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-envelope-open-text"></i> Inbox</a>
+                </li>
+                <li><a href="#">
+                    <i class="fa-regular fa-clock"></i>History</a>
+                </li>
+                <li><a href="#">
+                    <i class="bi bi-laptop"></i>Studio</a>
+                </li>
+                <li><a href="#">
+                    <i class="bi bi-arrow-right-circle-fill"></i>Commons</a></li>
+                <li><a href="#">
+                    <i class="bi bi-question-circle"></i>Help</a>
+                </li>
+            </ul>
+        </div>
 
-                <td valign="top"> <!--Account navigation-->
-                    <ul>
-                        <li><a href="">Notifications</a></li>
-                        <li><a href="../Profile/screen.html">Profile</a></li>
-                        <li><a href="">Files</a></li>
-                        <li><a href="">Settings</a></li>
-                        <li><a href="">ePortfolios</a></li>
-                        <li><a href="">Shared Content</a></li>
-                        <li><a href="">The Club</a></li>
-                        <li><a href="">Qwickly Course Tools</a></li>
-                        <li><a href="">Global Announcements</a></li>
-                    </ul>
-                </td>
+        <div class="d-none d-md-block">
+            <ul class="wd-navigation">
+                <li><a href="">Notifications</a></li>
+                <li class="wd-active"><a href="../Profile/screen.html">Profile</a></li>
+                <li><a href="">Files</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">ePortfolios</a></li>
+                <li><a href="">Shared Content</a></li>
+                <li><a href="">The Club</a></li>
+                <li><a href="">Qwickly Course Tools</a></li>
+                <li><a href="">Global Announcements</a></li>
+            </ul>
+        </div>
 
-                <td valign="top"> <!--account profile navigation-->
-                    Jose Annunziato's Profile<br>
-                    <hr><br />
-                    <div align="right">
-                        <form action="../Profile/Edit/screen.html" method="get">
-                            <button type="submit">Edit Profile</button>
-                        </form>
-                    </div>
-                    
-                
-                    <h2>Jose Annunziato</h2>
-                    <p>
-                        <h3>Contact</h3>
-                        No registered services, you can add some on the <a href="#" style="text-decoration: none;">settings</a> page.
-                    </p>
-                    <p>
-                        <h3>Biography</h3>
-                        Faculty, Sotware Engineer, AI, Space, and renewable enthusiast.
-                    </p>
-                    <p>
-                        <h3>Links</h3>
-                        <a href="https://www.youtube.com" style="text-decoration: none;">YouTube</a>
-                    </p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="flex-fill m-3">
+            Jose Annunziato's Profile<br>
+            <hr><br />
+            <div align="right">
+                <form action="../Profile/Edit/screen.html" method="get">
+                    <button type="submit">Edit Profile</button>
+                </form>
+            </div>
+            
+        
+            <h2>Jose Annunziato</h2>
+            <p>
+                <h3>Contact</h3>
+                No registered services, you can add some on the <a href="#" style="text-decoration: none;">settings</a> page.
+            </p>
+            <p>
+                <h3>Biography</h3>
+                Faculty, Sotware Engineer, AI, Space, and renewable enthusiast.
+            </p>
+            <p>
+                <h3>Links</h3>
+                <a href="https://www.youtube.com" style="text-decoration: none;">YouTube</a>
+            </p>
+        </div>
+    </div>
+  
 </body>
 </html>

@@ -8,12 +8,14 @@
 padding: 10px;     margin-bottom: 10px;
 font-size: 0.8em;  text-align: center;
 }
+
 .wd-kanbas-navigation li.wd-active {
 background-color: white;
 }
 .wd-kanbas-navigation li.wd-active a {
 color: #d4192d;
 }
+
 /* .wd-kanbas-navigation a {
 color: white;
 text-decoration: none;
@@ -26,6 +28,7 @@ margin-bottom: 5px;
 .wd-kanbas-navigation li.wd-kanbas-navigation-account a i {
     color: white;
 }
+
 .wd-kanbas-navigation-Nlogo {
     text-align: center;
     margin-bottom: 5px;
@@ -67,6 +70,7 @@ margin-bottom: 5px;
 .fa, .fas, .far, .bi {
     line-height: 1; /* Adjust line height for icon alignment */
 }
+
 
 
   
