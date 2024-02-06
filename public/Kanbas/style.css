@@ -7,4 +7,9 @@ body * {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.wd-breadcrumb-link{
+  text-decoration: none;
+  color: #d4192d;
+}
+
   
