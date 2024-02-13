@@ -4,12 +4,12 @@ function BooleanVariables() {
     let false2 = true1 && false1;
     let true2 = true1 || false1;
     let true3 = !false2;
-    let true4 = numberVariable === 123; // always use === not ==
+    let true4 = numberVariable === 123; // always use === not ==, === is strict equality, == is loose equality, === is preferred.== would convert the operands to the same type before making the comparison.
     let true5 = floatingPointNumber !== 321.432;
     let false3 = numberVariable < 100;
     return (
         <div>
-            <h2>Boolean Variables</h2>
+            <h4>Boolean Variables</h4>
             true1     = {true1 + ""}     <br />
             false1    = {false1 + ""}    <br />
             false2    = {false2 + ""}    <br />
