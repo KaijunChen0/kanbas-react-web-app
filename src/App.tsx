@@ -6,13 +6,13 @@ import Kanbas from './Kanbas';
 import HelloWorld from './Labs/a3/HelloWorld';
 
 function App() {
-  return ( // JSX, JavaScript XML,line 9 logo is a variable imported from the logo.svg file; return only one element, so wrap the h1 and Labs component in a div.
-  <div>
-    <HelloWorld />
-    <Labs/>
-    <Kanbas/>
-  </div>
-  );
+    return ( // JSX, JavaScript XML,line 9 logo is a variable imported from the logo.svg file; return only one element, so wrap the h1 and Labs component in a div.
+        <div>
+            <HelloWorld />
+            <Labs/>
+            <Kanbas/>
+        </div>
+    );
 }
 
 export default App;
