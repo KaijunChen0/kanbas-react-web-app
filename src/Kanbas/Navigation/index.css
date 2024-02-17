@@ -1,0 +1,80 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;  margin: 0px;
+    width: 80px;
+  }
+.wd-kanbas-navigation li {
+padding: 10px;     margin-bottom: 10px;
+font-size: 0.8em;  text-align: center;
+}
+
+.wd-kanbas-navigation li.wd-active {
+background-color: white;
+}
+.wd-kanbas-navigation li.wd-active a {
+color: #d4192d;
+}
+
+/* .wd-kanbas-navigation a {
+color: white;
+text-decoration: none;
+}
+.wd-kanbas-navigation a i {
+color: red;
+font-size: 2em;
+margin-bottom: 5px;
+} */
+.wd-kanbas-navigation li.wd-kanbas-navigation-account a i {
+    color: white;
+}
+
+.wd-account-icon{
+    color:#d4192d;
+}
+
+.wd-kanbas-navigation-Nlogo {
+    text-align: center;
+    margin-bottom: 5px;
+    height:40px;
+  }
+
+  .wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Ensure the anchor tag fills the li for centering */
+    padding: 5px 0; /* This will create a 5px space on top and bottom of text/icons */
+}
+
+.wd-kanbas-navigation a i {
+    color: #d4192d;
+    font-size: 2em;
+    display: block; /* This will allow margin to take effect properly */
+    margin: 5px auto; /* 5px margin at the top and bottom for spacing */
+}
+
+/* Center text and icons vertically and horizontally */
+.wd-kanbas-navigation li {
+    padding: 0; /* Remove padding and handle spacing with flexbox */
+    margin-bottom: 10px; /* Maintain bottom margin for spacing between items */
+    font-size: 0.8em;
+    display: flex; /* Flex container for vertical centering */
+    flex-direction: column; /* Stack flex items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Adjust the logo container */
+.wd-kanbas-navigation-Nlogo img {
+    max-height: 100%; /* Make sure the logo fits within the container */
+    margin-bottom: 5px; /* Keep the spacing consistent */
+}
+
+/* Since using icons from different libraries, may need to adjust for consistency */
+.fa, .fas, .far, .bi {
+    line-height: 1; /* Adjust line height for icon alignment */
+}
+
+
+
+  
