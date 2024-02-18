@@ -1,0 +1,67 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+/* hide the underscore of the link */
+a {
+  text-decoration: none;
+  color: #d4192d;
+}
+/* all buttons setting */
+.wd-button-border{
+  border: 1px solid #bfc6ca;
+  background-color: #f3f3f3;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+/* `Module` button setting */
+.wd-module-button{
+  background-color: #d4192d;
+  color: white;
+  margin: 1px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* select setting */
+.wd-custom-select{
+  width: 120px;
+  height: 38px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 2px;
+}

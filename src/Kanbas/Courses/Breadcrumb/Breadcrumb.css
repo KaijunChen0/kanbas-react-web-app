@@ -1,0 +1,12 @@
+.custom-breadcrumb {
+    --bs-breadcrumb-divider: ">";
+}
+
+.wd-breadcrumb-link{
+    text-decoration: none;
+    color: #d4192d;
+}
+
+.wd-breadcrumb-three-bars-button {
+    color: #d4192d;
+}
