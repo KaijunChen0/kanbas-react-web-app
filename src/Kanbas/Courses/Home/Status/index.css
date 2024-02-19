@@ -6,3 +6,9 @@
   color: gray;
   font-size: 12px;
 }
+
+.wd-status-link {
+  text-decoration: none;
+  color: #d4192d;
+}
+

@@ -31,28 +31,28 @@ function Status() {
             <div>
                 <h5>TO DO</h5><hr />
                 <ul className="list-group">
-                    <li className="list-group-item"><Link to="#">Grade A1 - ENV + HTML</Link></li>
+                    <li className="list-group-item"><Link to="#" className="wd-status-link">Grade A1 - ENV + HTML</Link></li>
                 </ul>
             </div><br />
             
             <div>
                 <div>
                     <h5>Comming Up</h5>
-                    <span className="float-end"><FaCalendar /><Link to="#"> View Calendar</Link></span><br />
+                    <span className="float-end"><FaCalendar /><Link to="#" className="wd-status-link"> View Calendar</Link></span><br />
                     <hr />
                 </div>
                 
                 <ul className="list-group">
                     <li className="list-group-item">
-                        <div><FaCalendar /><Link to="#"> Lectrue CS4550.12631.202410 </Link></div>
+                        <div><FaCalendar /><Link to="#" className="wd-status-link"> Lectrue CS4550.12631.202410 </Link></div>
                         <div className="wd-time">Sep 7 at 11:45am</div>
                     </li>
                     <li className="list-group-item">
-                        <div><FaCalendar /><Link to="#"> Lectrue CS4550.12631.202410 </Link></div>
+                        <div><FaCalendar /><Link to="#" className="wd-status-link"> Lectrue CS4550.12631.202410 </Link></div>
                         <div className="wd-time">Sep 11 at 11:45am</div>
                     </li>
                     <li className="list-group-item">
-                        <div><FaCalendar /><Link to="#"> CS5610 06 SP23 Lectrue </Link></div>
+                        <div><FaCalendar /><Link to="#" className="wd-status-link"> CS5610 06 SP23 Lectrue </Link></div>
                         <div className="wd-time">Sep 11 at 6pm</div>
                     </li>
                 </ul>

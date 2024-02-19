@@ -1,6 +1,7 @@
 import "./index.css"
 import { FaPlus } from "react-icons/fa6";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function ButtonBar() {
   return (
