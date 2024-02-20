@@ -5,6 +5,8 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 function AssignmentEditor() {
+//   const obj = useParams();//at least two parameters: assignmentId and courseId.
+//   console.log(obj);
   const { assignmentId } = useParams();
   const assignment = assignments.find(
     (assignment) => assignment._id === assignmentId);
@@ -22,7 +24,7 @@ function AssignmentEditor() {
             {/* Add button bar */}
             <div style={{"color": "green"}} className="col-auto ms-auto">
                         <FaRegCheckCircle /> Published
-                        <button type="button" className="btn btn-light square-button wd-button-border"><BsThreeDotsVertical /></button>
+                        <button type="button" className="btn btn-light square-button wd-button-border" style={{border: "1px solid #bfc6ca"}}><BsThreeDotsVertical /></button>
             </div>
         </div>
         <hr className="m-3 p-1"/>

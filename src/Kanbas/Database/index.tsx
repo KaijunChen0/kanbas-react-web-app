@@ -5,6 +5,9 @@ import assignments from './assignments.json';
 import enrollments from './enrollments.json';
 import users from './users.json';
 import grades from './grades.json';
+import quzzies from './quizzes.json';
+import exams from './exams.json';
+import projects from './projects.json';
 
 export {
   courses,
@@ -12,5 +15,8 @@ export {
   assignments,
   enrollments,
   users,
-  grades
+  grades,
+  quzzies,
+  exams,
+  projects
 };

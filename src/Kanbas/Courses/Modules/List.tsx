@@ -4,6 +4,7 @@ import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import ButtonBar from "./ButtonsBar";
+import { VscTriangleDown } from "react-icons/vsc";
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -20,9 +21,11 @@ function ModuleList() {
             onClick={() => setSelectedModule(module)}>
             <div>
               <FaEllipsisV className="me-2" />
+              <VscTriangleDown className="me-2" />
               {module.name}
               <span className="float-end">
                 <FaCheckCircle className="text-success" />
+                <VscTriangleDown className="me-2" />
                 <FaPlusCircle className="ms-2" />
                 <FaEllipsisV className="ms-2" />
               </span>

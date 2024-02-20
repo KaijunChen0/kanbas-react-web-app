@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Breadcrumb.css";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { useParams } from "react-router-dom";
-import { courses } from "../../Database";
+import { courses, assignments } from "../../Database";
 
 function BreadCrumb() {
     const { courseId } = useParams();

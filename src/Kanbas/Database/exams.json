@@ -1,0 +1,82 @@
+[
+    {
+        "_id": "E500101",
+        "title": "Midterm",
+        "course": "CS5001"
+    },
+    {
+        "_id": "E500102",
+        "title": "Final",
+        "course": "CS5001"
+    },
+    {
+        "_id": "E500201",
+        "title": "Midterm",
+        "course": "CS5002"
+    },
+    {
+        "_id": "E500202",
+        "title": "Final",
+        "course": "CS5002"
+    },
+    {
+        "_id": "E500401",
+        "title": "Midterm",
+        "course": "CS5004"
+    },
+    {
+        "_id": "E500402",
+        "title": "Final",
+        "course": "CS5004"
+    },
+    {
+        "_id": "E500801",
+        "title": "Midterm",
+        "course": "CS5008"
+    },
+    {
+        "_id": "E500802",
+        "title": "Final",
+        "course": "CS5008"
+    },
+    {
+        "_id": "E520001",
+        "title": "Midterm",
+        "course": "CS5200"
+    },
+    {
+        "_id": "E520002",
+        "title": "Final",
+        "course": "CS5200"
+    },
+    {
+        "_id": "E570001",
+        "title": "Midterm",
+        "course": "CS5700"
+    },
+    {
+        "_id": "E570002",
+        "title": "Final",
+        "course": "CS5700"
+    },
+    {
+        "_id": "E550001",
+        "title": "Midterm",
+        "course": "CS5500"
+    },
+    {
+        "_id": "E550002",
+        "title": "Final",
+        "course": "CS5500"
+    },
+    {
+        "_id": "E561001",
+        "title": "Midterm",
+        "course": "CS5610"
+    },
+    {
+        "_id": "E561002",
+        "title": "Final",
+        "course": "CS5610"
+    }
+]

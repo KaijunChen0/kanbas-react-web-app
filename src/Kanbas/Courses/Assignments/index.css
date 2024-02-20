@@ -2,3 +2,13 @@
   text-decoration: none;
   color: black;
 }
+
+.rounded-rect-button {
+  border-radius: 40px; 
+  background-color: lightgray; 
+  border: 1px solid black; 
+  color: black; 
+  padding: 2px 5px;
+  font-size: 10px; 
+  cursor: pointer;
+}

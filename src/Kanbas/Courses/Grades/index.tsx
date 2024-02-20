@@ -1,5 +1,5 @@
 import { assignments, enrollments, grades, users } from "../../Database";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { FaFileImport, FaFileExport } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaFilter } from "react-icons/fa6";
@@ -13,18 +13,18 @@ function Grades() {
       <h1>Grades</h1>
       {/* Add button and search bar */}
       <div className="d-flex justify-content-end m-4">
-        <button type="button" className="btn btn-light wd-button-border me-2"><FaFileImport /> Import</button>
+        <button type="button" className="btn btn-light wd-button-border me-2" style={{border: "1px solid #bfc6ca"}}><FaFileImport /> Import</button>
         <div className="dropdown">
-            <button className="btn btn-light dropdown-toggle wd-button-border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button className="btn btn-light dropdown-toggle wd-button-border" style={{border: "1px solid #bfc6ca"}} type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <FaFileExport /> Export
             </button>
-            <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a className="dropdown-item" href="#">Action</a>
+                <a className="dropdown-item" href="#">Another action</a>
+                <a className="dropdown-item" href="#">Something else here</a>
+            </div>
         </div>
-        <button type="button" className="btn btn-light square-button wd-button-border"><IoSettingsSharp /></button>
+        <button type="button" className="btn btn-light square-button wd-button-border" style={{border: "1px solid #bfc6ca"}}><IoSettingsSharp /></button>
       </div>
 
       <div><hr className="m-4"/></div>
@@ -35,9 +35,14 @@ function Grades() {
             <label htmlFor="date-available"><b>Student Names</b></label>
             <select className="form-select" aria-label="Default select example">
                 <option selected><i className="fa-solid fa-magnifying-glass"></i> Search Students</option>
-                <option value="1">Amy</option>
-                <option value="2">Bob</option>
-                <option value="3">Clark</option>
+                {es.map((enrollment) => {
+                  const user = users.find((user) => user._id === enrollment.user);
+                  return (
+                      <option key={enrollment._id} value={user?._id}>
+                        {user?.firstName} {user?.lastName}
+                      </option>
+                    );
+                })}
             </select>
         </div>
         
@@ -45,9 +50,11 @@ function Grades() {
             <label htmlFor="date-available"><b>Assignment Names</b></label>
             <select className="form-select" aria-label="Default select example">
                 <option selected><i className="fa-solid fa-magnifying-glass"></i> Search Assignments</option>
-                <option value="1">A1</option>
-                <option value="2">A2</option>
-                <option value="3">A3</option>
+                {as.map((assignment) => (
+                  <option key={assignment._id} value={assignment._id}>
+                    {assignment.title}
+                  </option>
+                ))}
             </select>
             </div>
       </div>
