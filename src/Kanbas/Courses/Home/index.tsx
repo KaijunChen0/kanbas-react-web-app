@@ -6,10 +6,10 @@ function Home() {
       <> 
         <h2>Home</h2>
         <div className="d-flex">
-          <div style={{ flex: '1 1 auto' }}>{/* allow Modulelist to expand */}
+          <div className="flex-fill" style={{ flex: '1 1 auto'}}>{/* allow Modulelist to expand */}
             <ModuleList />
           </div>
-          <div style={{ flex: '0 1 auto' }}>{/* not allow Modulelist to expand */}
+          <div  className="flex-grow-0 me-2 d-none d-lg-block" style={{ flex: '0 1 auto' }}>{/* not allow Modulelist to expand */}
             <Status />
           </div>
         </div>

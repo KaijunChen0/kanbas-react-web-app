@@ -33,7 +33,7 @@ function BreadCrumb() {
                 );//find the link that matches the pathname
 
   return (
-    <>
+    <div className="d-none d-md-block">
       <nav className="m-3 custom-breadcrumb">
         <ol className="breadcrumb">
             <button type="button" className="btn btn-light"><HiMiniBars3 className="wd-breadcrumb-three-bars-button"/></button>
@@ -46,7 +46,7 @@ function BreadCrumb() {
         </ol>
         <hr />
       </nav>
-    </>
+    </div>
   );
 }
 

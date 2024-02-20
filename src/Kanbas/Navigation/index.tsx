@@ -20,13 +20,15 @@ function KanbasNavigation() {
   ];
   const { pathname } = useLocation();
   return (
-    <ul className="wd-kanbas-navigation">
-      {links.map((link, index) => (
-        <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
-          <Link to={`/Kanbas/${link.label}`}> {link.icon} <br /> {link.label} </Link>
-        </li>
-      ))}
-    </ul>
+    <div className="d-none d-md-block">
+      <ul className="wd-kanbas-navigation">
+        {links.map((link, index) => (
+          <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
+            <Link to={`/Kanbas/${link.label}`}> {link.icon} <br /> {link.label} </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 export default KanbasNavigation;
