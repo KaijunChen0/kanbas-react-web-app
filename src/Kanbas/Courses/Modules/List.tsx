@@ -8,15 +8,58 @@ import { VscTriangleDown } from "react-icons/vsc";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modulesList = modules.filter((module) => module.course === courseId);
-  const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+  // const modulesList = modules.filter((module) => module.course === courseId);  
+  const [moduleList, setModuleList] = useState(modules);
+  const [module, setModule] = useState({
+    _id: "0", name: "New Module",
+    description: "New Description",
+    course: courseId || "",
+  });
+
+  const addModule = (module: any) => {
+    const newModule = { ...module,
+      _id: new Date().getTime().toString() };
+    const newModuleList = [newModule, ...moduleList];
+    setModuleList(newModuleList);
+  };
+
+  const deleteModule = (moduleId: string) => {
+    const newModuleList = moduleList.filter(
+      (module) => module._id !== moduleId );
+    setModuleList(newModuleList);
+  };
+
+
+// delete or not?
+  const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+
   return (
     <div className="m-4">
-      {/* <!-- Add buttons here --> */}
       <ButtonBar />
+
+      <h4>Modules</h4>
+      <input value={module.name}
+        onChange={(e) => setModule({
+          ...module, name: e.target.value })}
+          className="form-control" 
+          style={{ marginBottom: "10px" }}
+      />
+      <textarea value={module.description}
+        onChange={(e) => setModule({
+          ...module, description: e.target.value })}
+          className="form-control"
+          style={{ marginBottom: "10px" }}
+      />
+      <button onClick={() => { addModule(module) }} 
+        className="btn btn-outline-success form-control"
+        style={{ marginBottom: "10px" }}>
+        Add</button>
+
       <ul className="list-group wd-modules">
-        {modulesList.map((module) => (
-          <li
+        {moduleList
+            .filter((module) => module.course === courseId)
+            .map((module, index) => (
+          <li key={index}
             className="list-group-item"
             onClick={() => setSelectedModule(module)}>
             <div>
@@ -24,6 +67,11 @@ function ModuleList() {
               <VscTriangleDown className="me-2" />
               {module.name}
               <span className="float-end">
+                <button
+                  onClick={() => deleteModule(module._id)}
+                  className="btn btn-outline-danger">
+                  Delete
+                </button>
                 <FaCheckCircle className="text-success" />
                 <VscTriangleDown className="me-2" />
                 <FaPlusCircle className="ms-2" />
