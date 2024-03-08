@@ -5,30 +5,47 @@ import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import ButtonBar from "./ButtonsBar";
 import { VscTriangleDown } from "react-icons/vsc";
+import { MdDelete } from "react-icons/md";
+import { useSelector, useDispatch } from "react-redux";
+import { addModule, deleteModule, updateModule, setModule } from "./reducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  // const modulesList = modules.filter((module) => module.course === courseId);  
-  const [moduleList, setModuleList] = useState(modules);
-  const [module, setModule] = useState({
-    _id: "0", name: "New Module",
-    description: "New Description",
-    course: courseId || "",
-  });
+  // const [moduleList, setModuleList] = useState(modules);
+  // const [module, setModule] = useState({
+  //   _id: "0", name: "New Module",
+  //   description: "New Description",
+  //   course: courseId || "",
+  // });
 
-  const addModule = (module: any) => {
-    const newModule = { ...module,
-      _id: new Date().getTime().toString() };
-    const newModuleList = [newModule, ...moduleList];
-    setModuleList(newModuleList);
-  };
+  // const addModule = (module: any) => {
+  //   const newModule = { ...module,
+  //     _id: new Date().getTime().toString() };
+  //   const newModuleList = [newModule, ...moduleList];
+  //   setModuleList(newModuleList);
+  // };
 
-  const deleteModule = (moduleId: string) => {
-    const newModuleList = moduleList.filter(
-      (module) => module._id !== moduleId );
-    setModuleList(newModuleList);
-  };
+  // const deleteModule = (moduleId: string) => {
+  //   const newModuleList = moduleList.filter(
+  //     (module) => module._id !== moduleId );
+  //   setModuleList(newModuleList);
+  // };
 
+  // const updateModule = () => {
+  //   const newModuleList = moduleList.map((m) => {
+  //     if (m._id === module._id) {
+  //       return module;
+  //     } else {
+  //       return m;
+  //     }
+  //   });
+  //   setModuleList(newModuleList);
+  // };
+  const moduleList = useSelector((state: KanbasState) => 
+    state.modulesReducer.modules);
+  const module = useSelector((state: KanbasState) => 
+    state.modulesReducer.module);
+  const dispatch = useDispatch();
 
 // delete or not?
   const [selectedModule, setSelectedModule] = useState(moduleList[0]);
@@ -51,9 +68,15 @@ function ModuleList() {
           style={{ marginBottom: "10px" }}
       />
       <button onClick={() => { addModule(module) }} 
-        className="btn btn-outline-success form-control"
+        className="btn btn-success"
         style={{ marginBottom: "10px" }}>
         Add</button>
+      <button onClick={updateModule}
+        className="btn btn-primary"
+        style={{marginLeft:"10px", marginBottom:"10px"}}>
+        Update
+      </button>
+
 
       <ul className="list-group wd-modules">
         {moduleList
@@ -66,12 +89,21 @@ function ModuleList() {
               <FaEllipsisV className="me-2" />
               <VscTriangleDown className="me-2" />
               {module.name}
+              <button
+                onClick={() => deleteModule(module._id)}
+                className="btn btn-outline-danger btn-sm"
+                style={{marginLeft:"10px"}}>
+                <MdDelete /> 
+                Delete
+              </button>
+              <button
+                onClick={(event) => { setModule(module); }}
+                className="btn btn-outline-success btn-sm"
+                style={{marginLeft:"10px"}}>
+                Edit
+              </button>
+
               <span className="float-end">
-                <button
-                  onClick={() => deleteModule(module._id)}
-                  className="btn btn-outline-danger">
-                  Delete
-                </button>
                 <FaCheckCircle className="text-success" />
                 <VscTriangleDown className="me-2" />
                 <FaPlusCircle className="ms-2" />
