@@ -1,49 +1,98 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { assignments } from "../../../Database";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import { KanbasState } from "../../../store";
+import { addAssignment } from "../assignmentsReducer";
 
 function AssignmentEditor() {
 //   const obj = useParams();//at least two parameters: assignmentId and courseId.
 //   console.log(obj);
   const { assignmentId } = useParams();
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId);
   const { courseId } = useParams();
+
+//   set the initial description of the assignment
+  const [description, setDescription] = useState("Assignment Description");
+    const handleDescriptionChange = (e: any) => {
+        setDescription(e.target.value);
+    }
+
+//   set the initial value of the points to 100
+  const [point, setPoint] = useState(100);
+  const handlePointChange = (e: any) => {
+    setPoint(e.target.value);
+  }
+
+//   set the initial dates of Due, Available from and Until
+    const [dueDate, setDueDate] = useState("");
+    const [availableDate, setAvailableDate] = useState("");
+    const [untilDate, setUntilDate] = useState("");
+    const handleDueDateChange = (e: any) => {
+        setDueDate(e.target.value);
+    }
+    const handleAvailableDateChange = (e: any) => {
+        setAvailableDate(e.target.value);
+    }
+    const handleUntilDateChange = (e: any) => {
+        setUntilDate(e.target.value);
+    }
+
+//   const assignment = assignments.find(
+//     (assignment) => assignment._id === assignmentId);
+    const assignmentList = useSelector((state: KanbasState) =>
+    state.assignmentsReducer.assignments).filter(
+    (assignment) => assignment.course === courseId);
+    const assignment = assignmentList.find(
+    (assignment) => assignment._id === assignmentId);
+    // console.log(assignment);
+
+    const [assignmentTitle, setAssignmentTitle] = useState(assignment.title? assignment.title : "New Assignment");
+    const handleAssignmentTitleChange = (e: any) => {
+        setAssignmentTitle(e.target.value);
+    }
+
   const navigate = useNavigate();
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
+    dispatch(addAssignment({...assignment, course: courseId}));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  const dispatch = useDispatch();
 
   return (
     <div className="container mb-3">
         <div className="m-3 p-1 row">
-            <h2>Assignment Name</h2>
+            <h2>Assignment Editor</h2>
             {/* Add button bar */}
             <div style={{"color": "green"}} className="col-auto ms-auto">
-                        <FaRegCheckCircle /> Published
-                        <button type="button" className="btn btn-light square-button wd-button-border" style={{border: "1px solid #bfc6ca"}}><BsThreeDotsVertical /></button>
+                <FaRegCheckCircle /> Published
+                <button type="button" className="btn btn-light square-button wd-button-border" 
+                    style={{border: "1px solid #bfc6ca"}}><BsThreeDotsVertical /></button>
             </div>
         </div>
         <hr className="m-3 p-1"/>
 
         {/* rest of content from previous assignment */}
-        <div  className="m-3 p-1 row">
+        <div className="m-3 p-1 row">
             <label htmlFor="">Assignment Name</label>
-            <input value={assignment?.title}
+            <input value={ assignmentTitle } 
+                onChange={handleAssignmentTitleChange}
                 className="form-control mb-2" />
         </div>
         
         <div className="m-3 p-1 row">
-            <textarea className="form-control" id="textarea1" rows={5}>This assignment describes how to install the development environment for creating andworking with Web applications we will be developing this semester. We will add newcontent every week, pushing the code to a GitHub source repository, and then deployingthe content to a remote server hosted on Netlify.</textarea>
+            <textarea className="form-control" id="textarea1" rows={5} 
+                value={description}
+                onChange={handleDescriptionChange}></textarea>
         </div>
 
         <div className="m-3 p-1 row">
             <label htmlFor="input-points" className="form-label col-sm-2">Points</label>
             <div className="col-sm-4">
-                <input type="number" value="100" className="form-control" id="input-points" />
+                <input type="number" value={point} className="form-control" id="input-points"
+                    onChange={handlePointChange} />
             </div>
         </div>
 
@@ -92,19 +141,22 @@ function AssignmentEditor() {
                             <label htmlFor="date-due" className="col-form-label"><b>Due</b></label>
                         </div>
                         <div className="col">
-                            <input className="form-control" type="date" id="date-due" value="" />
+                            <input className="form-control" type="date" id="date-due" value={dueDate } 
+                                onChange={handleDueDateChange}/>
                         </div>
                     </div>
                 
                     <div className="row g-3 m-3">
                         <div className="col-md-6">
                             <label htmlFor="date-available"><b>Available from</b></label>
-                            <input className="form-control" type="date" id="date-available" value="" />
+                            <input className="form-control" type="date" id="date-available" value={availableDate} 
+                                onChange={handleAvailableDateChange}/>
                         </div>
                         
                         <div className="col-md-6">
                             <label htmlFor="date-until"><b>Until</b></label>
-                            <input className="form-control" type="date" id="date-until" value="" />
+                            <input className="form-control" type="date" id="date-until" value={untilDate} 
+                                onChange={handleUntilDateChange}/>
                         </div>
                     </div>
                 </div>

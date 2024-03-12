@@ -1,15 +1,21 @@
 import React from "react";
-import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaRocket } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
-import { assignments, exams, quzzies, projects } from "../../Database";
-import SearchBar from "./SearchBar";
+import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaRocket, FaPlus } from "react-icons/fa";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { exams, quzzies, projects } from "../../Database";
 import { PiNotePencilBold } from "react-icons/pi";
 import "./index.css";
+import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "./assignmentsReducer";
+import { useSelector, useDispatch } from "react-redux";
+import { KanbasState } from "../../store";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import "../Modules/index.css";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignmentList = assignments.filter(
-    (assignment) => assignment.course === courseId);
+  const navigate = useNavigate();
+
+  // const assignmentList = assignments.filter(
+  //   (assignment) => assignment.course === courseId);
 
     // add quizzes,exam and project
   const quizList = quzzies.filter(
@@ -19,11 +25,39 @@ function Assignments() {
   const projectList = projects.filter(
     (project) => project.course === courseId);
 
+  const assignmentList = useSelector((state: KanbasState) =>
+    state.assignmentsReducer.assignments).filter(
+      (assignment) => assignment.course === courseId);
+  const assignment = useSelector((state: KanbasState) =>
+    state.assignmentsReducer.assignment);
+    // console.log(assignmentList);
+
+  const dispatch = useDispatch();
+
   return (
     <>
       { /* <!-- Add buttons and other fields here --> */}
       <h1>Assigment</h1>
-      <SearchBar />
+      
+      <div className="d-flex justify-content-between align-items-center m-4">
+          <input className="form-control w-25" type="text" placeholder="Search for Assignments" aria-label="default input example" />
+      
+          <div>
+              <button type="button" className="btn btn-light wd-button-border me-2" 
+                  style={{border:"1px solid #bfc6ca"}}><FaPlus /> Group</button>
+              {/* <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
+                  style={{border:"1px solid #bfc6ca", backgroundColor:"#d4192d", color:"white"}}
+                  onClick={()=>{ dispatch(addAssignment({...assignment, course: courseId}))}}><FaPlus />  
+                  Assignment</button> */}
+              <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
+                style={{border:"1px solid #bfc6ca", backgroundColor:"#d4192d", color:"white"}}
+                onClick={()=>navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`)}><FaPlus />  
+                Assignment</button>
+              <button type="button" className="btn btn-light square-button wd-button-border" 
+                  style={{border:"1px solid #bfc6ca"}}><BsThreeDotsVertical /></button>
+          </div>
+      </div>
+
       <hr className="m-4"/>
       {/* Assignment block */}
       <ul className="list-group wd-modules">
@@ -43,7 +77,17 @@ function Assignments() {
                 <Link
                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="wd-link-setting">{assignment.title}</Link>
                 <span className="float-end">
-                  <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
+                  <button className="btn btn-outline-danger btn-sm me-2"
+                    onClick={()=> {
+                      const isConfirmed = window.confirm('Are you sure you want to remove this assignment?');
+                      if (isConfirmed) {
+                        dispatch(deleteAssignment(assignment._id));
+                      }
+                    }}>
+                    Delete
+                  </button>
+                  <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" />
+                </span>
               </li>))}
           </ul>
         </li>
