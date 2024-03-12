@@ -5,7 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../../store";
-import { addAssignment } from "../assignmentsReducer";
+import { addAssignment, updateAssignment } from "../assignmentsReducer";
 
 function AssignmentEditor() {
 //   const obj = useParams();//at least two parameters: assignmentId and courseId.
@@ -56,7 +56,13 @@ function AssignmentEditor() {
   const navigate = useNavigate();
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
-    dispatch(addAssignment({...assignment, course: courseId}));
+    if(assignmentId) {
+        dispatch(updateAssignment({...assignment, title: assignmentTitle, description: description,
+            point, dueDate, availableDate, untilDate, course: courseId}));
+        } else {
+        dispatch(addAssignment({...assignment, title: assignmentTitle, description: description, 
+            point, dueDate, availableDate, untilDate, course: courseId}));
+    }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   const dispatch = useDispatch();
