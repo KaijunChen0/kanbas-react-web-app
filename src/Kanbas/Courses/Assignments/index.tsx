@@ -45,14 +45,15 @@ function Assignments() {
           <div>
               <button type="button" className="btn btn-light wd-button-border me-2" 
                   style={{border:"1px solid #bfc6ca"}}><FaPlus /> Group</button>
-              {/* <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
+              <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
                   style={{border:"1px solid #bfc6ca", backgroundColor:"#d4192d", color:"white"}}
                   onClick={()=>{ dispatch(addAssignment({...assignment, course: courseId}))}}><FaPlus />  
-                  Assignment</button> */}
-              <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
+                  Assignment</button>
+              {/* <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
                 style={{border:"1px solid #bfc6ca", backgroundColor:"#d4192d", color:"white"}}
                 onClick={()=>navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`)}><FaPlus />  
-                Assignment</button>
+                Assignment</button> */}
+
               <button type="button" className="btn btn-light square-button wd-button-border" 
                   style={{border:"1px solid #bfc6ca"}}><BsThreeDotsVertical /></button>
           </div>

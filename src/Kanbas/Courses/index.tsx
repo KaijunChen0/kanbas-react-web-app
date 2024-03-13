@@ -8,6 +8,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import './stylesheet.css';
 
 function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
@@ -19,8 +20,8 @@ function Courses({ courses }: { courses: any[]; }) {
       <CourseNavigation />
       <div>
         <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{ left: "320px", top: "50px" }} >
+          className="overflow-y-scroll position-fixed bottom-0 end-0 maindiv"
+           >
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />
