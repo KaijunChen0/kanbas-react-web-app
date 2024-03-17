@@ -5,13 +5,13 @@ import { useSelector } from "react-redux";
 import { LabState, TodoType } from "../../../store";
 
 function TodoList() {
-    const { todos } = useSelector((state: LabState) => state.todosReducer);
+    const { todos, todo } = useSelector((state: LabState) => state.todosReducer);
     return (
       <div>
         <h2>Todo List</h2>
         <ul className="list-group">
             <TodoForm/>
-            {todos.map((todo: TodoType) => (
+            {todos.map((todo: TodoType, index: number) => (
             <TodoItem todo={todo} />
             ))}
         </ul>
