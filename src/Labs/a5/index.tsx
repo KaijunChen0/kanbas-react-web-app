@@ -1,6 +1,7 @@
 
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithObjects from "./WorkingWithObjects";
+import WorkingWithArrays from "./WorkingWithArrays";
 
 function Assignment5() {
   return (
@@ -9,6 +10,7 @@ function Assignment5() {
       <a href="http://localhost:4000/a5/welcome" className="btn btn-primary" role="button">Welcome</a><br />
       <EncodingParametersInURLs />
       <WorkingWithObjects />
+      <WorkingWithArrays />
     </div>
   );
 }
