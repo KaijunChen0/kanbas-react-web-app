@@ -31,6 +31,21 @@ function WorkingWithArrays() {
             Get Completed Todos
         </a>
 
+        <h3>Creating new Items in an Array</h3>
+        <a href={`${API}/create`}
+            role="button"
+            className="btn btn-primary">
+            Create Todo
+        </a>
+
+        <h3>Deleting from an Array</h3>
+        <a href={`${API}/${todo.id}/delete`}
+            role="button"
+            className="btn btn-primary">
+            Delete Todo with ID = {todo.id}
+        </a>
+
+
       </div>
     );
   }
