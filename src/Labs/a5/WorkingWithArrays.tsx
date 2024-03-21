@@ -1,8 +1,15 @@
+import { title } from "process";
 import { useState } from "react";
 
 function WorkingWithArrays() {
     const API = "http://localhost:4000/a5/todos";
-    const [todo, setTodo] = useState({id: 1});
+    const [todo, setTodo] = useState({id: 1,
+        title: "NodeJS Assignment",
+        description: "Create a NodeJS server with ExpressJS",
+        due: "2021-09-09",
+        completed: false,
+        score: 100,
+});
 
     return (
       <div>
@@ -45,6 +52,31 @@ function WorkingWithArrays() {
             Delete Todo with ID = {todo.id}
         </a>
 
+        <h3>Updating an Item in an Array</h3>
+        <input type="text" 
+            value={todo.title} 
+            onChange={(e) => setTodo({
+                ...todo, 
+                title: e.target.value,
+            })}/> &nbsp;
+        <a href={`${API}/${todo.id}/title/${todo.title}}`}
+            role="button"
+            className="btn btn-primary">
+            Update Title to {todo.title}
+        </a>
+
+        <h3>Exercise 3.3.7 - Edit Complete of Todo</h3>
+        <input type="checkbox" 
+            checked={todo.completed} 
+            onChange={(e) => setTodo({
+                ...todo, 
+                completed: e.target.checked,
+            })}/> &nbsp;
+        <a href={`${API}/${todo.id}/completed/${todo.completed}}`}
+            role="button"
+            className="btn btn-primary">
+            Update Completed of Todo ID= {todo.id}
+        </a>
 
       </div>
     );

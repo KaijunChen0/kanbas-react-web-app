@@ -44,7 +44,7 @@ function WorkingWithObjects() {
             Update Title
         </a> 
 
-        <h3>Exercise 1: Create a Module Object</h3>
+        <h3>Exercise 3.2.4: Create a Module Object</h3>
         <h4>Retrieving Objects</h4>
         <a href="http://localhost:4000/a5/module"
             role="button"
@@ -68,7 +68,7 @@ function WorkingWithObjects() {
             Update Name of Module
         </a>
 
-        <h3>Exercise 2: Modify Score, Completed and Description of Assignment</h3>
+        <h3>Exercise 3.2.4: Modify Score, Completed and Description of Assignment</h3>
         <h4>Modifying Score</h4>
         <input type="number" 
             onChange={(e) => setAssignment({ ...assignment,
