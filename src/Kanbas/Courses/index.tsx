@@ -1,4 +1,4 @@
-import { courses } from "../../Kanbas/Database";
+// import { courses } from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
@@ -9,14 +9,26 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import './stylesheet.css';
+import { useEffect, useState } from "react";
+import * as client from "./client";
+import axios from "axios";
 
-function Courses({ courses }: { courses: any[]; }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  // const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({name: "Loading..."});
+  const findCourse = async (courseId?: string) => {
+    const course = await client.findCourseById(courseId);
+    setCourse(course);
+  };
+  useEffect(() => {
+    findCourse(courseId);
+  }, [courseId]);
+
   return (
     <div>
       <BreadCrumb />
-      {/* <h1><HiMiniBars3 /> {course?._id} {course?.name}</h1><hr /> */}
+      {/* <h1><HiMiniBars3 /> {course?.name}</h1><hr /> */}
       <CourseNavigation />
       <div>
         <div

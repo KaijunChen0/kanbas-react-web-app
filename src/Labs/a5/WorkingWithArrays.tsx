@@ -59,7 +59,7 @@ function WorkingWithArrays() {
                 ...todo, 
                 title: e.target.value,
             })}/> &nbsp;
-        <a href={`${API}/${todo.id}/title/${todo.title}}`}
+        <a href={`${API}/${todo.id}/title/${todo.title}`}
             role="button"
             className="btn btn-primary">
             Update Title to {todo.title}
@@ -72,10 +72,23 @@ function WorkingWithArrays() {
                 ...todo, 
                 completed: e.target.checked,
             })}/> &nbsp;
-        <a href={`${API}/${todo.id}/completed/${todo.completed}}`}
+        <a href={`${API}/${todo.id}/completed/${todo.completed}`}
             role="button"
             className="btn btn-primary">
             Update Completed of Todo ID= {todo.id}
+        </a>
+
+        <h3>Exercise 3.3.7 - Edit Description of Todo</h3>
+        <input type="text" 
+            value={todo.description} 
+            onChange={(e) => setTodo({
+                ...todo, 
+                description: e.target.value,
+            })}/> &nbsp;
+        <a href={`${API}/${todo.id}/description/${todo.description}`}
+            role="button"
+            className="btn btn-primary">
+            Update Description of Todo ID= {todo.id}
         </a>
 
       </div>
