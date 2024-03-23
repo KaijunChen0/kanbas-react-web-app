@@ -11,3 +11,8 @@ export const findCourseById = async (courseId?: string) => {
   const response = await axios.get(`${COURSES_API}/${courseId}`);
   return response.data;
 };
+
+export const addNewCourse = async (course: any) => {
+  const response = await axios.post(COURSES_API, course);
+  return response.data;
+};

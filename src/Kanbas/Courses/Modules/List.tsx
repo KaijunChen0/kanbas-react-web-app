@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
-import { modules } from "../../Database";
+// import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import ButtonBar from "./ButtonsBar";
 import { VscTriangleDown } from "react-icons/vsc";
 import { MdDelete } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
-import { addModule, deleteModule, updateModule, setModule } from "./reducer";
+import { addModule, deleteModule, updateModule, setModule, setModules } from "./reducer";
 import { KanbasState } from "../../store";
+import { findModulesForCourses } from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -50,6 +51,11 @@ function ModuleList() {
 
 // delete or not
   const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+
+  useEffect(() => {
+    findModulesForCourses(courseId)
+      .then((modules) => dispatch(setModules(modules)));
+  }, [courseId]);
 
   return (
     <div className="m-4">
