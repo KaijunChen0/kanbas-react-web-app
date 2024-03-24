@@ -1,8 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import { modules } from "../../Database";
 
+interface Module {
+  _id: string;
+  name: string;
+  description: string;
+  course: string;
+  lessons: [];
+};
+
 const initialState = {
-  modules: [],
+  modules: [] as Module[],
   module: { name: "New Module 123", description: "New Description" },
 };
 
