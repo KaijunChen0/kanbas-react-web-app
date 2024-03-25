@@ -9,8 +9,12 @@ function WorkingWithObjects() {
       });
     const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
     const fetchAssignment = async () => {
-        const response = await axios.get(`${ASSIGNMENT_URL}`);
-        setAssignment(response.data);
+        try{
+            const response = await axios.get(`${ASSIGNMENT_URL}`);
+            setAssignment(response.data);
+        }catch(error){
+            console.error(error);
+        }
       };
       const updateTitle = async () => {
         const response = await axios
@@ -31,7 +35,7 @@ function WorkingWithObjects() {
 
   return (
     <div>
-        <h3>Working With Objects</h3>
+        <h3>-------Working With Objects-------</h3>
         <h4>Retrieving Objects</h4>
         <a href="http://localhost:4000/a5/assignment"
             role="button"
@@ -123,10 +127,12 @@ function WorkingWithObjects() {
             className="btn btn-primary">
             Update Title to: {assignment.title}
         </button> &nbsp;
-        <button onClick={fetchAssignment} 
-            className="btn btn-primary">
+        <a onClick={fetchAssignment} 
+            className="btn btn-danger"
+            role="button"
+            href={`${ASSIGNMENT_URL}`}>
             Fetch Assignment
-        </button>
+        </a>
 
     </div>
   );

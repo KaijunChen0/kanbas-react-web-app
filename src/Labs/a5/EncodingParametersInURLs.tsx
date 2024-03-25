@@ -28,7 +28,7 @@ function EncodingParametersInURLs() {
 
   return (
     <div>
-      <h3>Encoding Parameters In URLs</h3>
+      <h3>-------Encoding Parameters In URLs-------</h3>
       <h4>Calculator</h4>
       <input type="number" 
         onChange={(e) => setA(Number(e.target.value))} value={a}/> &nbsp;
