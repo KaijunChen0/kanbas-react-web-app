@@ -9,7 +9,8 @@ import { MdDelete } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import { addModule, deleteModule, updateModule, setModule, setModules } from "./reducer";
 import { KanbasState } from "../../store";
-import { findModulesForCourses } from "./client";
+// import { findModulesForCourses, createModule } from "./client";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -26,12 +27,23 @@ function ModuleList() {
   //   const newModuleList = [newModule, ...moduleList];
   //   setModuleList(newModuleList);
   // };
+  const handleAddModule = () => {
+    client.createModule(courseId, module)
+      .then((module) => dispatch(addModule(module)));
+  }
 
   // const deleteModule = (moduleId: string) => {
   //   const newModuleList = moduleList.filter(
   //     (module) => module._id !== moduleId );
   //   setModuleList(newModuleList);
   // };
+
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
 
   // const updateModule = () => {
   //   const newModuleList = moduleList.map((m) => {
@@ -43,6 +55,11 @@ function ModuleList() {
   //   });
   //   setModuleList(newModuleList);
   // };
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
   const moduleList = useSelector((state: KanbasState) => 
     state.modulesReducer.modules);
   const module = useSelector((state: KanbasState) => 
@@ -53,7 +70,7 @@ function ModuleList() {
   const [selectedModule, setSelectedModule] = useState(moduleList[0]);
 
   useEffect(() => {
-    findModulesForCourses(courseId)
+    client.findModulesForCourses(courseId)
       .then((modules) => dispatch(setModules(modules)));
   }, [courseId]);
 
@@ -72,11 +89,16 @@ function ModuleList() {
           className="form-control"
           style={{ marginBottom: "10px" }}
       />
-      <button onClick={() => { dispatch(addModule({ ...module, course: courseId })) }} 
+      {/* <button onClick={() => { dispatch(addModule({ ...module, course: courseId })) }} 
+        className="btn btn-success"
+        style={{ marginBottom: "10px" }}>
+        Add</button> */}
+      <button onClick={handleAddModule} 
         className="btn btn-success"
         style={{ marginBottom: "10px" }}>
         Add</button>
-      <button onClick={() => dispatch(updateModule(module))}
+        
+      <button onClick={handleUpdateModule}
         className="btn btn-primary"
         style={{marginLeft:"10px", marginBottom:"10px"}}>
         Update
@@ -95,7 +117,7 @@ function ModuleList() {
               <VscTriangleDown className="me-2" />
               {module.name}
               <button
-                onClick={() => dispatch(deleteModule(module._id))}
+                onClick={() => handleDeleteModule(module._id)}
                 className="btn btn-outline-danger btn-sm"
                 style={{marginLeft:"10px"}}>
                 <MdDelete /> 

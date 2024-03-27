@@ -21,6 +21,8 @@ function WorkingWithArrays() {
         score: 100,
 });
 
+    const [errorMessage, setErrorMessage] = useState(null);
+
     const [todos, setTodos] = useState<Todo[]>([]);
     const fetchTodos = async () => {
     const response = await axios.get(API);
@@ -49,12 +51,22 @@ function WorkingWithArrays() {
         setTodos([...todos, response.data]);
     };
     const deleteTodo = async (todo: Todo) => {
-        const response = await axios.delete(`${API}/${todo.id}`);
-        setTodos(todos.filter((t) => t.id !== todo.id));
+        try{
+            const response = await axios.delete(`${API}/${todo.id}`);
+            setTodos(todos.filter((t) => t.id !== todo.id));
+        }catch (error: any) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
       };
     const updateTodo = async () => {
-        const response = await axios.put(`${API}/${todo.id}`, todo);
-        setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+        try{
+            const response = await axios.put(`${API}/${todo.id}`, todo);
+            setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+        } catch (error: any) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
     };
     
     
@@ -199,6 +211,13 @@ function WorkingWithArrays() {
             </li>
             ))}
         </ul>
+
+        {errorMessage && (
+            <div className="alert alert-danger mb-2 mt-2">
+            {errorMessage}
+            </div>
+        )}
+
 
       </div>
     );
