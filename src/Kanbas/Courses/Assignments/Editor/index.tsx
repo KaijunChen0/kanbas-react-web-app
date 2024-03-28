@@ -6,12 +6,24 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../../store";
 import { addAssignment, updateAssignment } from "../assignmentsReducer";
+import * as service from "../service";
 
 function AssignmentEditor() {
 //   const obj = useParams();//at least two parameters: assignmentId and courseId.
 //   console.log(obj);
   const { assignmentId } = useParams();
   const { courseId } = useParams();
+
+  const handleUpdateAssignment = (assignment: any) => {
+    service.updateAssignment(assignment).then((status) => {
+      dispatch(updateAssignment(assignment));
+    });
+  };
+  const handleAddAssignment = () => {
+    service.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
 
 //   set the initial description of the assignment
   const [description, setDescription] = useState("Assignment Description");
@@ -48,7 +60,7 @@ function AssignmentEditor() {
     (assignment) => assignment._id === assignmentId);
     // console.log(assignment);
 
-    const [assignmentTitle, setAssignmentTitle] = useState(assignment.title? assignment.title : "New Assignment");
+    const [assignmentTitle, setAssignmentTitle] = useState(assignment? assignment.title : "New Assignment");
     const handleAssignmentTitleChange = (e: any) => {
         setAssignmentTitle(e.target.value);
     }
@@ -57,11 +69,14 @@ function AssignmentEditor() {
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
     if(assignmentId) {
-        dispatch(updateAssignment({...assignment, title: assignmentTitle, description: description,
-            point, dueDate, availableDate, untilDate, course: courseId}));
+        // dispatch(updateAssignment({...assignment, title: assignmentTitle, description: description,
+        //     point, dueDate, availableDate, untilDate, course: courseId}));
+        handleUpdateAssignment({...assignment, title: assignmentTitle, description: description,
+            point, dueDate, availableDate, untilDate, course: courseId});
         } else {
-        dispatch(addAssignment({...assignment, title: assignmentTitle, description: description, 
-            point, dueDate, availableDate, untilDate, course: courseId}));
+        // dispatch(addAssignment({...assignment, title: assignmentTitle, description: description, 
+        //     point, dueDate, availableDate, untilDate, course: courseId}));
+        handleAddAssignment();
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };

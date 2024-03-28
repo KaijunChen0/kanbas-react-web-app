@@ -9,6 +9,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
 import * as client from "./Courses/client";
+import Account from "./Account";
 
 function Kanbas() {
   // const [courses, setCourses] = useState(db.courses);
@@ -83,9 +84,9 @@ function Kanbas() {
         <div style={{ flexGrow: 1 }}>
           <Routes>
               <Route path="/" element={<Navigate to="Dashboard" />} />
-              <Route path="Northeastern" element={<h1>Northeastern</h1>} />
-              <Route path="Account" element={<h1>Account</h1>} />
-              <Route path="Dashboard" element={<Dashboard
+              <Route path="/Northeastern" element={<h1>Northeastern</h1>} />
+              <Route path="/Account/*" element={<Account />} />
+              <Route path="/Dashboard" element={<Dashboard
                 courses={courses}
                 course={course}
                 setCourse={setCourse}

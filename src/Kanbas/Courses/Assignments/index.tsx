@@ -1,17 +1,39 @@
-import React from "react";
+import React, { useEffect} from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaRocket, FaPlus } from "react-icons/fa";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { exams, quzzies, projects } from "../../Database";
 import { PiNotePencilBold } from "react-icons/pi";
 import "./index.css";
-import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "./assignmentsReducer";
+import { addAssignment, deleteAssignment, updateAssignment, selectAssignment, setAssignments } from "./assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../store";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import "../Modules/index.css";
+// import { findAssignmentsForCourses, createAssignment } from "./service";
+import * as service from "./service";
 
 function Assignments() {
   const { courseId } = useParams();
+
+  useEffect(() => {
+    service.findAssignmentsForCourses(courseId).then((assignments) => {
+      dispatch(setAssignments(assignments));
+    });
+  }, [courseId]);
+
+  const handleAddAssignment = () => {
+    service.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+
+  const handleDeleteAssignment = (assignmentId: string) => {
+    service.deleteAssignment(assignmentId).then((status) => { //'status' comes from 'res.sendStatus(200)'
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+
+
   const navigate = useNavigate();
 
   // const assignmentList = assignments.filter(
@@ -45,10 +67,15 @@ function Assignments() {
           <div>
               <button type="button" className="btn btn-light wd-button-border me-2" 
                   style={{border:"1px solid #bfc6ca"}}><FaPlus /> Group</button>
-              <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
+              {/* <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
                   style={{border:"1px solid #bfc6ca", backgroundColor:"#d4192d", color:"white"}}
                   onClick={()=>{ dispatch(addAssignment({...assignment, course: courseId}))}}><FaPlus />  
-                  Assignment</button>
+                  Assignment</button> */}
+              <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
+                  style={{border:"1px solid #bfc6ca", backgroundColor:"#d4192d", color:"white"}}
+                  onClick={handleAddAssignment}><FaPlus />  
+                  Assignment
+              </button>
               {/* <button type="button" className="btn btn-light wd-button-border me-2 wd-module-button" 
                 style={{border:"1px solid #bfc6ca", backgroundColor:"#d4192d", color:"white"}}
                 onClick={()=>navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`)}><FaPlus />  
@@ -82,7 +109,7 @@ function Assignments() {
                     onClick={()=> {
                       const isConfirmed = window.confirm('Are you sure you want to remove this assignment?');
                       if (isConfirmed) {
-                        dispatch(deleteAssignment(assignment._id));
+                        handleDeleteAssignment(assignment._id);
                       }
                     }}>
                     Delete
