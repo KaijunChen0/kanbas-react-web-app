@@ -11,9 +11,13 @@ import axios from "axios";
 import * as client from "./Courses/client";
 import Account from "./Account";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function Kanbas() {
   // const [courses, setCourses] = useState(db.courses);
-  const COURSES_API = "http://localhost:4000/api/courses";
+  // const COURSES_API = "http://localhost:4000/api/courses";
+  // const COURSES_API = "https://kanbas-node-server-app-0k43.onrender.com/api/courses";//replace with render.com remote server
+  const COURSES_API = `${API_BASE}/api/courses`;
   const [courses, setCourses] = useState<any[]>([]);
   const findAllCourses = async () => {
     const courses = await client.findAllCourses();

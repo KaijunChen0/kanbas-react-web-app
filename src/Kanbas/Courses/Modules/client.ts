@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const COURSES_API = "http://localhost:4000/api/courses";
-const MODULES_API = "http://localhost:4000/api/modules";
+// const COURSES_API = "http://localhost:4000/api/courses";
+// const MODULES_API = "http://localhost:4000/api/modules";
+// const COURSES_API = "https://kanbas-node-server-app-0k43.onrender.com/api/courses";//replace with render.com remote server
+// const MODULES_API = "https://kanbas-node-server-app-0k43.onrender.com/api/modules";//replace with render.com remote server
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_API = `${API_BASE}/api/courses`;
+const MODULES_API = `${API_BASE}/api/modules`;
 
 export const deleteModule = async (moduleId?: string) => {
   const response = await axios
