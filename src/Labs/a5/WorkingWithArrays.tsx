@@ -2,6 +2,8 @@ import { title } from "process";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function WorkingWithArrays() {
     interface Todo {
         id: number;
@@ -12,7 +14,7 @@ function WorkingWithArrays() {
         score: number;
     }
 
-    const API = "http://localhost:4000/a5/todos";
+    const API = `${API_BASE}/a5/todos`;
     const [todo, setTodo] = useState({id: 1,
         title: "NodeJS Assignment",
         description: "Create a NodeJS server with ExpressJS",
@@ -56,7 +58,11 @@ function WorkingWithArrays() {
             setTodos(todos.filter((t) => t.id !== todo.id));
         }catch (error: any) {
             console.log(error);
-            setErrorMessage(error.response.data.message);
+            if(error.response){
+                setErrorMessage(error.response.data.message);
+            }else{
+                console.error(error.message);
+            }
         }
       };
     const updateTodo = async () => {

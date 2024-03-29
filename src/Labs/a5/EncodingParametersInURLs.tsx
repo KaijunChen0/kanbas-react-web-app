@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [welcome, setWelcome] = useState("");
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get(`${API_BASE}/a5/welcome`);
     setWelcome(response.data);
   };
   useEffect(() => {
@@ -16,12 +18,12 @@ function EncodingParametersInURLs() {
   const [result, setResult] = useState(0);
   const fetchSum = async (a: any , b: any) => {
     const response = await
-      axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+      axios.get(`${API_BASE}/a5/add/${a}/${b}`);
     setResult(response.data);
   };
   const fetchSubtraction = async (a:any, b: any) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/subtract/${a}/${b}`);
+      `${API_BASE}/a5/subtract/${a}/${b}`);
     setResult(response.data);
   };
 
@@ -37,22 +39,22 @@ function EncodingParametersInURLs() {
       <input value={result} type="" readOnly />
 
       <h3>Path Parameters</h3>
-      <a href={`http://localhost:4000/a5/add/${a}/${b}`}
+      <a href={`${API_BASE}/a5/add/${a}/${b}`}
         className="btn btn-primary"
         role="button">
         Add {a} + {b}
       </a> &nbsp;
-      <a href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+      <a href={`${API_BASE}/a5/subtract/${a}/${b}`}
         className="btn btn-danger"
         role="button">
         Substract {a} - {b}
       </a> &nbsp;
-      <a href={`http://localhost:4000/a5/multiply/${a}/${b}`}
+      <a href={`${API_BASE}/a5/multiply/${a}/${b}`}
         className="btn btn-warning"
         role="button">
         Multiply {a} * {b}
       </a> &nbsp;
-      <a href={`http://localhost:4000/a5/divide/${a}/${b}`}
+      <a href={`${API_BASE}/a5/divide/${a}/${b}`}
         className="btn btn-info"
         role="button">
         Divide {a} / {b}
@@ -60,21 +62,21 @@ function EncodingParametersInURLs() {
       
       <h3>Query Parameters</h3>
       <a className="btn btn-primary"
-        href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}
+        href={`${API_BASE}/a5/calculator?operation=add&a=${a}&b=${b}`}
         role="button">
         Add {a} + {b}
       </a> &nbsp;
       <a className="btn btn-danger"
-        href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
+        href={`${API_BASE}/a5/calculator?operation=subtract&a=${a}&b=${b}`}
         role="button">
         Substract {a} - {b}
       </a> &nbsp;
-      <a href={`http://localhost:4000/a5/calculator/?operation=multiply&a=${a}&b=${b}`}
+      <a href={`${API_BASE}/a5/calculator?operation=multiply&a=${a}&b=${b}`}
         className="btn btn-warning"
         role="button">
         Multiply {a} * {b}
       </a> &nbsp;
-      <a href={`http://localhost:4000/a5/calculator/?operation=divide&a=${a}&b=${b}`}
+      <a href={`${API_BASE}/a5/calculator?operation=divide&a=${a}&b=${b}`}
         className="btn btn-info"
         role="button">
         Divide {a} / {b}
