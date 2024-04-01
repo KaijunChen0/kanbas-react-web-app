@@ -11,7 +11,7 @@ export const fetchAllUsers = async () => {
 }
 
 export const registerUser = async (user: any) => {
-    const response = await request.get(`/users/register/${user.username}/${user.password}`); // '/users' is to be appended to the baseURL
+    const response = await request.post(`/users/register/${user.username}/${user.password}`); // '/users' is to be appended to the baseURL
     return response.data;
 }
 
