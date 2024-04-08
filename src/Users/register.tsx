@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 
 export default function RegisterScreen() {
     const navigate = useNavigate();
-    const [user, setUser] = useState({username: "", password: ""});
+    const [user, setUser] = useState({ id: new Date().getTime().toString(), username: "", 
+    password: "", firstName: "", lastName: "", role: "USER", 
+    email: "", dob: "2000-01-01"
+  });
     const register = async () => {
         try{
             const response = await client.registerUser(user);

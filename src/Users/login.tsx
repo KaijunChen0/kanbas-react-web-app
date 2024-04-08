@@ -1,10 +1,14 @@
 import { useState } from "react";
 import * as client from "./client";
 import { Link, useNavigate } from "react-router-dom";
+import { User } from "./client";
 
 export default function LoginScreen() {
     const navigate = useNavigate();
-    const [user, setUser] = useState({username: "", password: ""});
+    const [user, setUser] = useState<User>({ id: "", username: "", 
+    password: "", firstName: "", lastName: "", role: "USER", 
+    email: "", dob: "2000-01-01" 
+  });
     const login = async () => {
         try{
             const existingUser = await client.loginUser(user);
