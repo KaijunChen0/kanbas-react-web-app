@@ -41,7 +41,23 @@ export const logoutUser = async () => {
     return response.data;
 }
 
-export const updateUser = async (user: User) => {
+export const updateUser = async (user: any) => {
     const response = await axiosWithCredentials.put(`/users/${user.id}`, user);
     return response.data;
 }
+
+export const deleteUser = async (user: any) => {
+    const response = await axiosWithCredentials.delete(`/users/${user._id}`);
+    return response.data;
+}
+
+export const fetchUserById = async (id: string) => {
+    const response = await axiosWithCredentials.get(`/users/${id}`);
+    return response.data;
+}
+
+export const findUsersByRole = async (role: string) => {
+    const response = await axiosWithCredentials.get(`/users?role=${role}`);
+    return response.data;
+  };
+  

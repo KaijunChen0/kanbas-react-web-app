@@ -14,7 +14,6 @@ export const deleteModule = async (moduleId?: string) => {
   return response.data;
 };
 
-
 export const findModulesForCourses = async (courseId?: string) => {
     const response = await axios.get(`${COURSES_API}/${courseId}/modules`);
     return response.data;
@@ -33,5 +32,3 @@ export const updateModule = async (module?:any) => {
       put(`${MODULES_API}/${module._id}`, module);
     return response.data;
 };
-  
-  

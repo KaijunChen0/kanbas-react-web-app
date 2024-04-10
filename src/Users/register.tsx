@@ -9,6 +9,8 @@ export default function RegisterScreen() {
     password: "", firstName: "", lastName: "", role: "USER", 
     email: "", dob: "2000-01-01"
   });
+  const [error, setError] = useState("");
+
     const register = async () => {
         try{
             const response = await client.registerUser(user);
@@ -21,6 +23,7 @@ export default function RegisterScreen() {
     return (
         <div>
             <h1>Register</h1>
+            {error && <div>{error}</div>}
             <input
                 type="text"
                 placeholder="Username"

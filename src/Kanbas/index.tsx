@@ -28,7 +28,7 @@ function Kanbas() {
   }, []);
 
   const [course, setCourse] = useState({
-    _id: "CS0000", name: "New Course", number: "New Number",
+    id: "CS0000", name: "New Course", number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
     image: "newCourse.png",
   });
@@ -52,7 +52,7 @@ function Kanbas() {
       `${COURSES_API}/${courseId}`
     );
     setCourses(courses.filter(
-      (c) => c._id !== courseId));
+      (c) => c.id !== courseId));
   };
 
   // const updateCourse = () => {
@@ -68,12 +68,13 @@ function Kanbas() {
   // };
   const updateCourse = async () => {
     const response = await axios.put(
-      `${COURSES_API}/${course._id}`,
+      `${COURSES_API}/${course.id}`,
       course
     );
     setCourses(
       courses.map((c) => {
-        if (c._id === course._id) {
+        if (c.id === course.
+          id) {
           return course;
         }
         return c;

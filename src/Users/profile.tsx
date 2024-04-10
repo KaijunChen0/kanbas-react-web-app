@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as client from "./client";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
     // const [profile, setProfile] = useState({username: "", password: ""});
@@ -39,6 +40,11 @@ export default function Profile() {
             {/* <pre>
                 <code>{JSON.stringify(profile, null, 2)}</code>
             </pre> */}
+            <Link to="/Kanbas/Account/Admin/Users"
+                className="btn btn-warning w-100">
+                Users
+            </Link>
+
             {profile && (
                 <div>
                 <input className="form-control mt-2"

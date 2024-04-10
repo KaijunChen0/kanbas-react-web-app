@@ -44,7 +44,6 @@ function ModuleList() {
     });
   };
 
-
   // const updateModule = () => {
   //   const newModuleList = moduleList.map((m) => {
   //     if (m._id === module._id) {
@@ -79,12 +78,12 @@ function ModuleList() {
       <ButtonBar />
 
       <h4>Modules</h4>
-      <input value={module.name}
+      <input value={module.name} placeholder="Module Name"
         onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
           className="form-control" 
           style={{ marginBottom: "10px" }}
       />
-      <textarea value={module.description}
+      <textarea value={module.description} placeholder="Module Description"
         onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
           className="form-control"
           style={{ marginBottom: "10px" }}
@@ -103,7 +102,6 @@ function ModuleList() {
         style={{marginLeft:"10px", marginBottom:"10px"}}>
         Update
       </button>
-
 
       <ul className="list-group wd-modules">
         {moduleList
