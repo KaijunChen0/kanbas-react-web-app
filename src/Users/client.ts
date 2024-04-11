@@ -11,10 +11,16 @@ export interface User {
     dob: string;
 };
 
+export const BASE_API = process.env.REACT_APP_API_BASE;
 const axiosWithCredentials = axios.create({
-    baseURL: "http://localhost:4000/api",
-    withCredentials: true, //use cookies
+    baseURL: `${BASE_API}/api`,
+    withCredentials: true,
 });
+
+// const axiosWithCredentials = axios.create({
+//     baseURL: "http://localhost:4000/api",
+//     withCredentials: true, //use cookies
+// });
 
 export const fetchAllUsers = async () => {
     const response = await axiosWithCredentials.get("/users");
